@@ -1,0 +1,66 @@
+[
+  {
+    "usuario": "pepito",
+    "contrasena": "123",
+    "ubicacion": "Madrid",
+    "nombre": "Marcos",
+    "telefono": "69874512",
+    "Restaurantes": [
+      {
+        "usuario": "MC23",
+        "contrasena": "12345",
+        "ubicacion": "Madrid",
+        "nombreRestaurante": "MCDo",
+        "Menu":[{
+        	"plato":[
+        	{
+        		"nombre":"BigMac",
+        		"descripcion":"Hamburgesa",
+        		"precio": 10	
+        	}
+        	]
+        	}],
+        "Reserva" : [{
+			"fecha": "21-03-2023",
+			"hora":"20:00",
+			"Cliente":[{
+			"nombre" : "Marcos",
+			"telefono": "69874512"
+			}],
+			"plato":[
+        	{
+        		"nombre":"BigMac",
+        		"descripcion":"Hamburgesa",
+        		"precio": 10	
+        	}
+        	]				
+        }	
+        ]
+      },
+      {
+        "usuario": "Goiko",
+        "contrasena": "741",
+        "ubicacion": "Madrid",
+        "nombreRestaurante": "Goikoo"
+      },
+      {
+        "usuario": "TR",
+        "contrasena": "753",
+        "ubicacion": "Madrid",
+        "nombreRestaurante": "TommyRomans"
+      },
+      {
+        "usuario": "KB",
+        "contrasena": "951",
+        "ubicacion": "Madrid",
+        "nombreRestaurante": "Kebab"
+      },
+      {
+        "usuario": "Lima23",
+        "contrasena": "9589",
+        "ubicacion": "Madrid",
+        "nombreRestaurante": "Limanta"
+      }
+      ]
+      }
+]
