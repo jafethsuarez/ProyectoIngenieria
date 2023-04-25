@@ -1,0 +1,20 @@
+{
+  "reservas": [
+    {
+      "idReserva": 1,
+      "cliente": "Pedro Pérez",
+      "fecha": "2023-04-20",
+      "hora": "19:00",
+      "mesa": 5,
+      "cantidadPersonas": 4
+    },
+    {
+      "idReserva": 2,
+      "cliente": "Laura González",
+      "fecha": "2023-04-21",
+      "hora": "20:30",
+      "mesa": 2,
+      "cantidadPersonas": 2
+    }
+  ]
+}

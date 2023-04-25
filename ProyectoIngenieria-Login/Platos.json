@@ -1,0 +1,19 @@
+{
+  "platos": [
+    {
+      "nombre": "Ensalada César",
+      "descripcion": "Ensalada fresca con lechuga romana, croutones, queso parmesano y aderezo César",
+      "precio": 7.50
+    },
+    {
+      "nombre": "Pasta Carbonara",
+      "descripcion": "Pasta con salsa cremosa de huevo, queso parmesano, guanciale y pimienta negra",
+      "precio": 12.00
+    },
+    {
+      "nombre": "Tiramisú",
+      "descripcion": "Postre italiano a base de bizcochos empapados en café y licor, cubiertos con una crema de queso mascarpone y espolvoreados con cacao en polvo",
+      "precio": 6.00
+    }
+  ]
+}
