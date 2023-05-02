@@ -54,7 +54,7 @@
                         <Image url="@../../image/usuario.png" />
                      </image>
                   </ImageView>
-                  <Label onMouseClicked="#Restaurantes" text="Restaurantes" GridPane.rowIndex="2">
+                  <Label fx:id="lblRestaurantes" onMouseClicked="#Restaurantes" text="Restaurantes" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -78,7 +78,7 @@
                         <Insets left="20.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <Label onMouseClicked="#Reservas" text="Reservas" GridPane.rowIndex="3">
+                  <Label fx:id="lblReservas" onMouseClicked="#Reservas" text="Reservas" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -86,10 +86,13 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblCliente" text="Cliente" GridPane.rowIndex="1">
+                  <Label fx:id="lblCliente" onMouseClicked="#PanelCliente" text="Cliente" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                   <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                      <image>

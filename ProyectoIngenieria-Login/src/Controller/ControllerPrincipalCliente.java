@@ -10,13 +10,19 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class ControllerPrincipalCliente {
 
@@ -34,6 +40,7 @@ public class ControllerPrincipalCliente {
 
     @FXML
     private Label nombreRest;
+    
     @FXML
     private GridPane gridRestaurante;
 
@@ -42,6 +49,7 @@ public class ControllerPrincipalCliente {
 
     @FXML
     private JFXComboBox<CategoriaRestaurante> CbxRest;
+    
 
     @FXML
     void MostrarCategorias(ActionEvent event) {
@@ -74,9 +82,47 @@ public class ControllerPrincipalCliente {
 
     @FXML
     void Reservar(ActionEvent event) {
+    	try {
+			FXMLLoader loaderReservaCliente = new FXMLLoader(getClass().getResource("/Vistas/ViewReservaCliente.fxml"));
+			ControllerReservaCliente controlReservaCliente = new ControllerReservaCliente();
 
+			loaderReservaCliente.setController(controlReservaCliente);
+			Parent rootClienteReserva = loaderReservaCliente.load();
+			Stage stage = (Stage) lblCliente.getScene().getWindow();
+
+			stage.setScene(new Scene(rootClienteReserva));
+			stage.show();
+		} catch (Exception e) {
+			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("Error al abrir la ventana");
+			alert.showAndWait();
+		}
     }
+    
+    @FXML
+    void PanelCliente(MouseEvent event) {
+    	try {
+			FXMLLoader loaderClientePanel = new FXMLLoader(getClass().getResource("/Vistas/ViewClientePanel.fxml"));
+			ControllerClientePanel controlClientePanel = new ControllerClientePanel();
 
+			loaderClientePanel.setController(controlClientePanel);
+			Parent rootCliente = loaderClientePanel.load();
+			Stage stage = (Stage) lblCliente.getScene().getWindow();
+
+			stage.close();
+			stage.setScene(new Scene(rootCliente));
+			stage.show();
+		} catch (Exception e) {
+			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("Error al abrir la ventana");
+			alert.showAndWait();
+		}
+    }
+    
     @FXML
     void Reservas(MouseEvent event) {
 
@@ -89,7 +135,7 @@ public class ControllerPrincipalCliente {
 
     @FXML
     void Salir(MouseEvent event) {
-
+    	Platform.exit();
     }
 
     @FXML

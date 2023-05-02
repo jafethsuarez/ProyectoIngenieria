@@ -70,7 +70,13 @@ public class ControllerLogin {
         	    alert.setContentText("Datos incorrectos");
         	    alert.showAndWait();
 			}
+    		
     }
+    
+    //Variables usadas más tarde para el panel de control
+    protected static int idCliente;
+    protected static int idRestaurante;
+    
 
     @FXML
     void ingresar(ActionEvent event)  {
@@ -105,7 +111,8 @@ public class ControllerLogin {
             if (cliente != null && cliente.getUsuario() != null && cliente.getContrasena() != null &&
                     cliente.getUsuario().equals(txtusuario.getText()) &&
                     cliente.getContrasena().equals(txtcontrasena.getText())) {
-                encontrarCli = true;
+            	idCliente = l;
+            	encontrarCli = true;
             }
             l++;
         }
@@ -130,6 +137,7 @@ public class ControllerLogin {
                     Restaurante currentRestaurante = cliente.getRestaurantes().get(k);
                     if (currentRestaurante != null && currentRestaurante.getUsuario() != null &&
                             currentRestaurante.getUsuario().equals(txtusuario.getText())) {
+                    	idRestaurante = j;
                         encontrarRestaurante = true;
                     }
                     k++;
@@ -193,7 +201,7 @@ public class ControllerLogin {
 
     @FXML
     void initialize() {
-        
+ 
 
     }
 }

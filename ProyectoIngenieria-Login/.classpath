@@ -7,7 +7,7 @@
 			<accessrule kind="accessible" pattern="javafx/&quot;&quot;"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/MarcosJafeth/eclipse-workspace/ProyectoIngenieria/lib/gson-2.8.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/MarcosJafeth/eclipse-workspace/ProyectoIngenieria/lib/jfoenix-8.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Daniel/Documents/GitHub/ProyectoIngenieria/ProyectoIngenieria-Login/lib/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Daniel/Documents/GitHub/ProyectoIngenieria/ProyectoIngenieria-Login/lib/jfoenix-8.0.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

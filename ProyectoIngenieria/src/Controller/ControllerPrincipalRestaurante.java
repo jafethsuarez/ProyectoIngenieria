@@ -1,6 +1,8 @@
 package Controller;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -12,16 +14,16 @@ public class ControllerPrincipalRestaurante {
     private Label PanelControl;
 
     @FXML
-    private TableColumn<?, ?> ColumnUsuario;
+    private TableColumn<String, String> ColumnUsuario;
 
     @FXML
-    private TableColumn<?, ?> ColumnTelefo;
+    private TableColumn<String, String> ColumnTelefo;
 
     @FXML
-    private TableColumn<?, ?> ColumnHora;
+    private TableColumn<String, String> ColumnHora;
 
     @FXML
-    private TableColumn<?, ?> ColumnMesa;
+    private TableColumn<String, String> ColumnMesa;
 
     @FXML
     void menu(MouseEvent event) {
@@ -30,7 +32,8 @@ public class ControllerPrincipalRestaurante {
 
     @FXML
     void salir(MouseEvent event) {
-
+    	Platform.exit();
+    	System.exit(0);
     }
 
 }

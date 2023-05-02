@@ -1,9 +1,17 @@
 package Clases;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.sql.Date;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Vector;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class Reserva {
 		private int id;
@@ -83,6 +91,10 @@ public class Reserva {
 
 		public void setId(int id) {
 			this.id = id;
+		}
+		
+		public Vector<Reserva> recuperarReservas(){
+			return null;
 		}
 			
 		

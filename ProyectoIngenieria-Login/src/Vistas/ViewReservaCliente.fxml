@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" styleClass="body" stylesheets="@../CssStyle/Login.css" HBox.hgrow="ALWAYS">
+         <children>
+            <GridPane fx:id="gridRestaurante" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="48.0" valignment="CENTER" />
+                <RowConstraints maxHeight="360.0" minHeight="0.0" prefHeight="104.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="306.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="306.0" minHeight="9.0" prefHeight="116.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="268.0" minHeight="10.0" prefHeight="170.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Datos de la reserva:" GridPane.halignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Bookman Old Style" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label text="Numero de personas " GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Hora" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Fecha" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXButton fx:id="confirmarReservaBtn" alignment="CENTER" onMouseClicked="#confirmarReserva" styleClass="btn" text="Confirmar reserva" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXDatePicker fx:id="fechaPicker" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="350.0" />
+                     </GridPane.margin>
+                  </JFXDatePicker>
+                  <JFXTimePicker fx:id="horaPicker" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="350.0" />
+                     </GridPane.margin>
+                  </JFXTimePicker>
+                  <JFXTextField fx:id="numPersonasLbl" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="350.0" right="75.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

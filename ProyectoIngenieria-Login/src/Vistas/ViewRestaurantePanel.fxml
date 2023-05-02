@@ -3,18 +3,17 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="600.0" prefWidth="298.0" styleClass="root" stylesheets="@../CssStyle/Login.css">
          <children>
@@ -114,45 +113,83 @@
             </GridPane>
          </children>
       </VBox>
-      <VBox layoutX="297.0" prefHeight="600.0" prefWidth="503.0" styleClass="body" stylesheets="@../CssStyle/Login.css">
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="26.0" styleClass="body" stylesheets="@../CssStyle/Login.css" />
+      <GridPane prefHeight="600.0" prefWidth="495.0" styleClass="body" stylesheets="@../CssStyle/Login.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="143.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="350.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="213.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="220.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <GridPane alignment="CENTER" VBox.vgrow="ALWAYS">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="377.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <Label text="Reservas" GridPane.halignment="CENTER">
-                     <GridPane.margin>
-                        <Insets />
-                     </GridPane.margin>
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
-                  <TableView fx:id="tablaReservas" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                     <columns>
-                        <TableColumn fx:id="ColumnUsuario" prefWidth="75.0" text="Nombre" />
-                        <TableColumn fx:id="ColumnTelefo" prefWidth="75.0" text="Telefono" />
-                        <TableColumn fx:id="ColumnHora" prefWidth="75.0" text="Hora" />
-                        <TableColumn fx:id="ColumnFecha" prefWidth="75.0" text="Fecha" />
-                        <TableColumn fx:id="ColumnMesa" prefWidth="75.0" text="Nº Mesa" />
-                     </columns>
-                     <GridPane.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </GridPane.margin>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
-                  <JFXButton fx:id="CancelarReserva" onMouseClicked="#ReservaCancelar" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Cancelar Reserva" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
+            <Label alignment="CENTER" text="Restaurante" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label text="Nombre de usuario" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="Nombre Restaurante" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="Contraseña" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label text="Categoria" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <TextField fx:id="nombreUsuarioLbl" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="nombreRestauranteLbl" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="contrasenaLbl" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="categoriaLbl" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <Label text="Ubicación" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <TextField fx:id="ubicacionLbl" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
+            <Label text="Aforo" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <TextField fx:id="aforoLbl" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <JFXButton onMouseClicked="#GuardarCambios" styleClass="btn" text="Guardar Cambios" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
          </children>
-      </VBox>
+      </GridPane>
    </children>
-</AnchorPane>
+</HBox>
