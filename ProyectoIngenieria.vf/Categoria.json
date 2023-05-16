@@ -1,0 +1,222 @@
+[
+  {
+    "nombreCategoria": "Comida rápida",
+    "restaurantes": [
+      {
+        "nombreRestaurante": "Mc Donald",
+        "menu": {
+          "platos": [
+            {
+              "id": 1,
+              "nombre": "Big Mac",
+              "descripcion": "Hambuegues con salsa especial bigmac",
+              "precio": 16.0
+            },
+            {
+              "id": 2,
+              "nombre": "Cuarto de libra",
+              "descripcion": "Descripción del Plato 2",
+              "precio": 15.0
+            },
+            {
+              "id": 3,
+              "nombre": "Doble chesse",
+              "descripcion": "Doble carne con extra queso",
+              "precio": 12.0
+            }
+          ]
+        },
+        "mesa": 25,
+        "aforo": 0,
+        "usuario": "MC23",
+        "contrasena": "rest123",
+        "ubicacion": "Barcelona"
+      },
+      {
+        "nombreRestaurante": "BURGER KING",
+        "menu": {
+          "platos": [
+            {
+              "id": 1,
+              "nombre": "Burger chesse",
+              "descripcion": "Doble con queso",
+              "precio": 12.0
+            },
+            {
+              "id": 2,
+              "nombre": "Carne Burger",
+              "descripcion": "Carne Doble",
+              "precio": 25.0
+            },
+            {
+              "id": 3,
+              "nombre": "Patatas con queso",
+              "descripcion": "media docena de patatas bañadas en queso ",
+              "precio": 6.0
+            }
+          ]
+        },
+        "reservas": [],
+        "mesa": 10,
+        "aforo": 20,
+        "usuario": "BURGER23",
+        "contrasena": "123456",
+        "ubicacion": "Valencia"
+      }
+    ]
+  },
+  {
+    "nombreCategoria": "Bistró",
+    "restaurantes": [
+      {
+        "nombreRestaurante": "Bistro 45",
+        "menu": {
+          "platos": [
+            {
+              "id": 3,
+              "nombre": "Plato 3",
+              "descripcion": "Descripción del Plato 3",
+              "precio": 12.0
+            },
+            {
+              "id": 4,
+              "nombre": "Plato 4",
+              "descripcion": "Descripción del Plato 4",
+              "precio": 18.0
+            }
+          ]
+        },
+        "mesa": 0,
+        "aforo": 0,
+        "usuario": "Bistro45",
+        "contrasena": "bistro123",
+        "ubicacion": "Valencia"
+      }
+    ]
+  },
+  {
+    "nombreCategoria": "Sushi",
+    "restaurantes": [
+      {
+        "nombreRestaurante": "Sushi Go",
+        "menu": {
+          "platos": [
+            {
+              "id": 5,
+              "nombre": "Plato 5",
+              "descripcion": "Descripción del Plato 5",
+              "precio": 8.0
+            },
+            {
+              "id": 6,
+              "nombre": "Plato 6",
+              "descripcion": "Descripción del Plato 6",
+              "precio": 12.0
+            }
+          ]
+        },
+        "mesa": 0,
+        "aforo": 0,
+        "usuario": "SushiGo",
+        "contrasena": "sushigo456",
+        "ubicacion": "Sevilla"
+      },
+      {
+        "nombreRestaurante": "Makis",
+        "menu": {
+          "platos": [
+            {
+              "id": 1,
+              "nombre": "Maki California",
+              "descripcion": "12 piezas de makis california con palta, salmon y queso ",
+              "precio": 12.0
+            }
+          ]
+        },
+        "reservas": [],
+        "mesa": 5,
+        "aforo": 25,
+        "usuario": "mak23",
+        "contrasena": "000",
+        "ubicacion": "Madrid"
+      }
+    ]
+  },
+  {
+    "nombreCategoria": "Pizzería",
+    "restaurantes": [
+      {
+        "nombreRestaurante": "Pizza Mia",
+        "menu": {
+          "platos": [
+            {
+              "id": 7,
+              "nombre": "Plato 7",
+              "descripcion": "Descripción del Plato 7",
+              "precio": 9.0
+            },
+            {
+              "id": 8,
+              "nombre": "Plato 8",
+              "descripcion": "Descripción del Plato 8",
+              "precio": 14.0
+            }
+          ]
+        },
+        "mesa": 0,
+        "aforo": 0,
+        "usuario": "PizzaMia",
+        "contrasena": "pizzamia789",
+        "ubicacion": "Madrid"
+      },
+      {
+        "nombreRestaurante": "Tagliatella",
+        "menu": {
+          "platos": [
+            {
+              "id": 1,
+              "nombre": "Pasta Carbonara",
+              "descripcion": "pasta con fideos",
+              "precio": 12.0
+            }
+          ]
+        },
+        "reservas": [],
+        "mesa": 6,
+        "aforo": 23,
+        "usuario": "Tag23",
+        "contrasena": "123456",
+        "ubicacion": "Valencia"
+      }
+    ]
+  },
+  {
+    "nombreCategoria": "Cocina casera",
+    "restaurantes": [
+      {
+        "nombreRestaurante": "Aji",
+        "menu": {
+          "platos": [
+            {
+              "id": 7,
+              "nombre": "Plato 7",
+              "descripcion": "Descripción del Plato 7",
+              "precio": 9.0
+            },
+            {
+              "id": 8,
+              "nombre": "Plato 8",
+              "descripcion": "Descripción del Plato 8",
+              "precio": 14.0
+            }
+          ]
+        },
+        "mesa": 11,
+        "aforo": 40,
+        "usuario": "PizzaMia",
+        "contrasena": "pizzamia789",
+        "ubicacion": "Madrid"
+      }
+    ]
+  }
+]

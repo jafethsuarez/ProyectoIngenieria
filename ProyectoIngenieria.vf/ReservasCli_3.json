@@ -1,0 +1,32 @@
+{
+  "Mc Donald": [
+    {
+      "id": 1,
+      "fecha": {
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 16.0
+      },
+      "hora": "15:00",
+      "cantidad": 6,
+      "menuSeleccionado": [
+        "Big Mac - 10.5€"
+      ],
+      "nombreRest": "Mc Donald"
+    },
+    {
+      "id": 2,
+      "fecha": {
+        "year": 2023,
+        "month": 5,
+        "day": 18
+      },
+      "hora": "14:00",
+      "cantidad": 8,
+      "menuSeleccionado": [
+        "Big Mac - 10.5€"
+      ],
+      "nombreRest": "Mc Donald"
+    }
+  ]
+}

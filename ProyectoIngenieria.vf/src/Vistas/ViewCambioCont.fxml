@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="352.0" styleClass="body" stylesheets="@../CssStyle/Login.css" HBox.hgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+               <image>
+                  <Image url="@../../image/Logo.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="490.0" styleClass="root" stylesheets="@../CssStyle/Login.css" HBox.hgrow="ALWAYS">
+         <children>
+            <GridPane alignment="CENTER" prefHeight="700.0" prefWidth="469.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="245.0" minHeight="0.0" prefHeight="153.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="207.0" minHeight="10.0" prefHeight="165.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="txtusuario" text="Usuario" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXButton onAction="#CambiarContrasena" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Listo" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" text="Cambiar Contraseña" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <JFXPasswordField fx:id="txtContrasena" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                  </JFXPasswordField>
+                  <Label text="Nueva contraseña:" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Confirmar Contraseña:" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXPasswordField fx:id="txtxconfirmarCont" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                  </JFXPasswordField>
+                  <Label text="Antigua contraseña:" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXPasswordField fx:id="txtantiguacont" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                  </JFXPasswordField>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>
