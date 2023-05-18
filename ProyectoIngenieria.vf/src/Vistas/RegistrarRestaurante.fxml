@@ -155,12 +155,12 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="nombreRestaurante" />
+                        <Label text="Nombre del restaurante" />
                         <Label text="Usuario" GridPane.rowIndex="1" />
-                        <Label text="mesa" GridPane.rowIndex="4" />
-                        <Label text="aforo" GridPane.rowIndex="3" />
-                        <Label text="Ubicacion" GridPane.rowIndex="5" />
-                        <Label text="contraseña" GridPane.rowIndex="2" />
+                        <Label text="Nº de mesas" GridPane.rowIndex="4" />
+                        <Label text="Aforo" GridPane.rowIndex="3" />
+                        <Label text="Ubicación" GridPane.rowIndex="5" />
+                        <Label text="Contraseña" GridPane.rowIndex="2" />
                         <JFXTextField fx:id="txtnombreRest" GridPane.columnIndex="1" />
                         <JFXTextField fx:id="txtusuario" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <JFXTextField fx:id="txtContraseña" GridPane.columnIndex="1" GridPane.rowIndex="2" />

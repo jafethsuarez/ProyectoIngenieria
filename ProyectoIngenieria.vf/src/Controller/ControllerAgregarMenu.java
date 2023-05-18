@@ -12,6 +12,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -68,8 +70,11 @@ public class ControllerAgregarMenu {
         try {
             precio = Double.parseDouble(txtPrecioMen.getText());
         } catch (NumberFormatException e) {
-            // Aquí debes manejar cómo quieres tratar los errores de entrada del usuario
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Precio inválido, introduce un número");
+            alert.showAndWait();
             return;
         }
 
@@ -139,7 +144,7 @@ public class ControllerAgregarMenu {
 
     @FXML
     void Salir(MouseEvent event) {
-
+    	Platform.exit();
     }
 
     @FXML

@@ -3,9 +3,9 @@
     {
       "id": 1,
       "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 18
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 18.0
       },
       "hora": "16:00",
       "cantidad": 8,
@@ -13,75 +13,17 @@
         "Big Mac - 10.5€"
       ],
       "nombreRest": "Mc Donald"
-    },
-    {
-      "id": 2,
-      "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 17
-      },
-      "hora": "15:00",
-      "cantidad": 4,
-      "menuSeleccionado": [
-        "Doble chesse - 12.0€"
-      ],
-      "nombreRest": "Mc Donald"
     }
   ],
-  "Bistro 45": [
-    {
-      "id": 1,
-      "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 25
-      },
-      "hora": "14:00",
-      "cantidad": 6,
-      "menuSeleccionado": [
-        "Plato 3 - 12.0€"
-      ],
-      "nombreRest": "Bistro 45"
-    }
-  ],
-  "Sushi Go": [
-    {
-      "id": 1,
-      "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 17
-      },
-      "hora": "15:00",
-      "cantidad": 7,
-      "menuSeleccionado": [
-        "Plato 6 - 12.0€"
-      ],
-      "nombreRest": "Sushi Go"
-    }
-  ],
+  "Bistro 45": [],
+  "Sushi Go": [],
   "BURGER KING": [
     {
-      "id": 1,
-      "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 9
-      },
-      "hora": "15:00",
-      "cantidad": 4,
-      "menuSeleccionado": [
-        "Burger chesse - 12.0€"
-      ],
-      "nombreRest": "BURGER KING"
-    },
-    {
       "id": 2,
       "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 19
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 19.0
       },
       "hora": "13:00",
       "cantidad": 7,
@@ -89,6 +31,22 @@
         "Carne Burger - 25.0€"
       ],
       "nombreRest": "BURGER KING"
+    }
+  ],
+  "Tierra Burrito": [
+    {
+      "id": 1,
+      "fecha": {
+        "year": 2023,
+        "month": 6,
+        "day": 8
+      },
+      "hora": "13:00",
+      "cantidad": 3,
+      "menuSeleccionado": [
+        "Burrito Carne - 10.0€"
+      ],
+      "nombreRest": "Tierra Burrito"
     }
   ]
 }

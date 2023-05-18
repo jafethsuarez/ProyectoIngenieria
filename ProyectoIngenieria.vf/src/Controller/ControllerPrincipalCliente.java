@@ -65,7 +65,7 @@ public class ControllerPrincipalCliente {
 
     private List<CategoriaRestaurante> categorias;
 
-    private static final int NUM_COLUMNS = 4;
+    private static final int NUM_COLUMNS = 2;
     
     private Cliente cliente;
     private Restaurante restaurante;
@@ -147,7 +147,7 @@ public class ControllerPrincipalCliente {
     	
     	
     	CbxRest.setOnAction(e -> {
-    	    gridRestaurante.getChildren().clear();
+    		gridRestaurante.getChildren().retainAll(CbxRest);
     	    String categoriaSeleccionada = CbxRest.getValue();
 
     	    List<Restaurante> restaurantesFiltrados = null;
@@ -159,9 +159,10 @@ public class ControllerPrincipalCliente {
     	    }
 
     	    if (restaurantesFiltrados != null) {
-    	        int row = 0;
+    	        int row = 2;
     	        int col = 0;
     	        for (Restaurante restaurante : restaurantesFiltrados) {
+    	        	
     	            Button btnRestaurante = new Button(restaurante.getNombreRestaurante());
     	            btnRestaurante.setOnAction(event -> showRestaurantDetails(restaurante));
     	            gridRestaurante.add(btnRestaurante, col, row);

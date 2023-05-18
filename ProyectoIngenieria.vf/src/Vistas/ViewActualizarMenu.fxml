@@ -54,7 +54,7 @@
                         <Image url="@../../image/usuario.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblEditarMenu" onMouseClicked="#Restaurantes" text="EditarMenu" GridPane.rowIndex="2">
+                  <Label fx:id="lblEditarMenu" onMouseClicked="#Restaurantes" text="Editar menú" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -126,7 +126,7 @@
                   <RowConstraints maxHeight="268.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label text="Actualizar Menu" GridPane.halignment="CENTER">
+                  <Label text="Actualizar Menú" GridPane.halignment="CENTER">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
@@ -155,12 +155,12 @@
                               <Insets left="20.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label text="Descripcion :" GridPane.rowIndex="1">
+                        <Label text="Descripción:" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="20.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label text="Precio :" GridPane.rowIndex="2">
+                        <Label text="Precio:" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="20.0" />
                            </GridPane.margin>

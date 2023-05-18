@@ -3,55 +3,55 @@
     "nombreCategoria": "Comida rápida",
     "restaurantes": [
       {
-        "nombreRestaurante": "Mc Donald",
+        "nombreRestaurante": "MrDonalds",
         "menu": {
           "platos": [
             {
               "id": 1,
               "nombre": "Big Mac",
-              "descripcion": "Hambuegues con salsa especial bigmac",
+              "descripcion": "Hamburguesa con salsa especial Big Mac",
               "precio": 16.0
             },
             {
-              "id": 2,
-              "nombre": "Cuarto de libra",
-              "descripcion": "Descripción del Plato 2",
-              "precio": 15.0
+              "id": 3,
+              "nombre": "Doble cheese",
+              "descripcion": "Doble carne con extra queso",
+              "precio": 12.0
             },
             {
-              "id": 3,
-              "nombre": "Doble chesse",
-              "descripcion": "Doble carne con extra queso",
+              "id": 4,
+              "nombre": "Cheeseburger Extra",
+              "descripcion": "Cheeseburger con una carne extra",
               "precio": 12.0
             }
           ]
         },
         "mesa": 25,
-        "aforo": 0,
+        "aforo": 100,
         "usuario": "MC23",
         "contrasena": "rest123",
         "ubicacion": "Barcelona"
       },
       {
-        "nombreRestaurante": "BURGER KING",
+        "nombreRestaurante": "Kurger Bing",
         "menu": {
           "platos": [
             {
               "id": 1,
-              "nombre": "Burger chesse",
-              "descripcion": "Doble con queso",
+              "nombre": "Cheeseburger",
+              "descripcion": "Una carne con queso",
               "precio": 12.0
             },
             {
               "id": 2,
-              "nombre": "Carne Burger",
+              "nombre": "Doble cheeseburger",
               "descripcion": "Carne Doble",
               "precio": 25.0
             },
             {
               "id": 3,
               "nombre": "Patatas con queso",
-              "descripcion": "media docena de patatas bañadas en queso ",
+              "descripcion": "Medio kilo de patatas bañadas en queso",
               "precio": 6.0
             }
           ]
@@ -62,6 +62,31 @@
         "usuario": "BURGER23",
         "contrasena": "123456",
         "ubicacion": "Valencia"
+      },
+      {
+        "nombreRestaurante": "Tierra Burrito",
+        "menu": {
+          "platos": [
+            {
+              "id": 1,
+              "nombre": "Burrito Carne",
+              "descripcion": "Burrito con ternera",
+              "precio": 10.0
+            },
+            {
+              "id": 2,
+              "nombre": "Burrito con pollo",
+              "descripcion": "Burrito con pollo extremeño",
+              "precio": 12.0
+            }
+          ]
+        },
+        "reservas": [],
+        "mesa": 15,
+        "aforo": 40,
+        "usuario": "tierra",
+        "contrasena": "456",
+        "ubicacion": "Madrid"
       }
     ]
   },
@@ -74,20 +99,20 @@
           "platos": [
             {
               "id": 3,
-              "nombre": "Plato 3",
-              "descripcion": "Descripción del Plato 3",
+              "nombre": "Torreznos",
+              "descripcion": "Torreznos con salsa kimchi-mayo",
               "precio": 12.0
             },
             {
               "id": 4,
-              "nombre": "Plato 4",
-              "descripcion": "Descripción del Plato 4",
+              "nombre": "Potro al horno",
+              "descripcion": "Carne de potro asada a fuego lento",
               "precio": 18.0
             }
           ]
         },
-        "mesa": 0,
-        "aforo": 0,
+        "mesa": 10,
+        "aforo": 35,
         "usuario": "Bistro45",
         "contrasena": "bistro123",
         "ubicacion": "Valencia"
@@ -103,20 +128,20 @@
           "platos": [
             {
               "id": 5,
-              "nombre": "Plato 5",
-              "descripcion": "Descripción del Plato 5",
+              "nombre": "Nigiri de salmón",
+              "descripcion": "4 nigiris de salmón",
               "precio": 8.0
             },
             {
               "id": 6,
-              "nombre": "Plato 6",
-              "descripcion": "Descripción del Plato 6",
+              "nombre": "Maki de atún",
+              "descripcion": "8 makis de atún toro",
               "precio": 12.0
             }
           ]
         },
-        "mesa": 0,
-        "aforo": 0,
+        "mesa": 10,
+        "aforo": 40,
         "usuario": "SushiGo",
         "contrasena": "sushigo456",
         "ubicacion": "Sevilla"
@@ -128,7 +153,7 @@
             {
               "id": 1,
               "nombre": "Maki California",
-              "descripcion": "12 piezas de makis california con palta, salmon y queso ",
+              "descripcion": "12 piezas de makis california con palta, salmon y queso",
               "precio": 12.0
             }
           ]
@@ -151,20 +176,20 @@
           "platos": [
             {
               "id": 7,
-              "nombre": "Plato 7",
-              "descripcion": "Descripción del Plato 7",
+              "nombre": "Margherita",
+              "descripcion": "Pizza margarita de la casa",
               "precio": 9.0
             },
             {
               "id": 8,
-              "nombre": "Plato 8",
-              "descripcion": "Descripción del Plato 8",
+              "nombre": "Carbonara",
+              "descripcion": "Pizza carbonara de la casa",
               "precio": 14.0
             }
           ]
         },
-        "mesa": 0,
-        "aforo": 0,
+        "mesa": 30,
+        "aforo": 100,
         "usuario": "PizzaMia",
         "contrasena": "pizzamia789",
         "ubicacion": "Madrid"
@@ -176,7 +201,7 @@
             {
               "id": 1,
               "nombre": "Pasta Carbonara",
-              "descripcion": "pasta con fideos",
+              "descripcion": "Maccheroni con salsa carbonara",
               "precio": 12.0
             }
           ]
@@ -199,14 +224,14 @@
           "platos": [
             {
               "id": 7,
-              "nombre": "Plato 7",
-              "descripcion": "Descripción del Plato 7",
+              "nombre": "Cocido madrileño",
+              "descripcion": "Gran ración de cocido madrileño",
               "precio": 9.0
             },
             {
               "id": 8,
-              "nombre": "Plato 8",
-              "descripcion": "Descripción del Plato 8",
+              "nombre": "Arroz a la cubana",
+              "descripcion": "Arroz con huevo frito y tomate",
               "precio": 14.0
             }
           ]

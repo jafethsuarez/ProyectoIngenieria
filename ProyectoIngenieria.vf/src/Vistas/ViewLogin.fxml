@@ -50,7 +50,7 @@
                   <RowConstraints maxHeight="240.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXTextField fx:id="txtusuario" focusColor="WHITE" style="-fx-background-color: white;" text="Usuario" unFocusColor="#170000">
+                  <JFXTextField fx:id="txtusuario" focusColor="WHITE" promptText="Usuario" style="-fx-background-color: white;" unFocusColor="#170000">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -58,17 +58,17 @@
                         <Insets left="20.0" right="20.0" />
                      </GridPane.margin>
                   </JFXTextField>
-                  <Label onMouseClicked="#Registrar" text="Registrtate" GridPane.rowIndex="2">
+                  <Label onMouseClicked="#Registrar" text="Registrate" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="20.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label onMouseClicked="#RecuperarCont" text="RecuperaContraseña" GridPane.rowIndex="3">
+                  <Label onMouseClicked="#RecuperarCont" text="¿Has olvidado tu contraseña?" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="20.0" />
                      </GridPane.margin>
                   </Label>
-                  <JFXPasswordField fx:id="txtcontrasena" style="-fx-background-color: white;" GridPane.rowIndex="1">
+                  <JFXPasswordField fx:id="txtcontrasena" promptText="Contraseña" style="-fx-background-color: white;" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />
                      </GridPane.margin>

@@ -138,8 +138,8 @@
                     <columns>
                         <TableColumn fx:id="ColumnId" prefWidth="75.0" text="Id" />
                         <TableColumn fx:id="ColumnUbi" prefWidth="101.0" text="Ubicacion" />
-                      <TableColumn fx:id="ColumnUsuario" prefWidth="101.0" text="Usuario" />
-                      <TableColumn fx:id="ColumnTelefo" prefWidth="113.0" text="Telefono" />
+                      <TableColumn fx:id="ColumnUsuario" prefWidth="113.0" text="Usuario" />
+                      <TableColumn fx:id="ColumnTelefo" prefWidth="169.0" text="Nº Teléfono" />
                     </columns>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

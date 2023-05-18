@@ -24,6 +24,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -32,7 +33,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class controladorClienteReg {
-	   @FXML
+	    @FXML
 	    private ResourceBundle resources;
 
 	    @FXML
@@ -43,6 +44,7 @@ public class controladorClienteReg {
 
 	    @FXML
 	    private TableView<Cliente> TableCliente;
+	    
 	    @FXML
 	    private TableColumn<Cliente, Integer> ColumnId;
 
@@ -122,8 +124,12 @@ public class controladorClienteReg {
 	    	        controlReg.eliminarClientePorId(clienteSeleccionado.getId());
 	    	        lista.remove(clienteSeleccionado);
 	    	    } else {
-	    	        // Muestra un mensaje de error si no hay ningún cliente seleccionado
-	    	        System.out.println("No hay ningún cliente seleccionado");
+	                Alert alert = new Alert(Alert.AlertType.WARNING);
+	                alert.setHeaderText(null);
+	                alert.setTitle("Error");
+	                alert.setContentText("No hay ningún cliente seleccionado");
+	                alert.showAndWait();
+	                return;
 	    	    }
 	    }
 	    @FXML

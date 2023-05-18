@@ -122,13 +122,13 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="377.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="440.0" minHeight="10.0" prefHeight="427.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Restaurantes Registrados" GridPane.halignment="CENTER">
+                  <Label prefHeight="69.0" prefWidth="401.0" text="Restaurantes Registrados" GridPane.halignment="CENTER">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
@@ -138,10 +138,10 @@
                   </Label>
                   <TableView fx:id="TableRestaurante" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                     <columns>
-                        <TableColumn fx:id="ColumnNombre" prefWidth="214.0" text="NombreRestaurante" />
-                        <TableColumn fx:id="ColumnUbicacion" prefWidth="87.0" text="Ubicacion" />
-                      <TableColumn fx:id="ColumnMesa" prefWidth="47.0" text="Mesa" />
-                      <TableColumn fx:id="ColumnAforo" prefWidth="110.0" text="aforo" />
+                        <TableColumn fx:id="ColumnNombre" prefWidth="214.0" text="Nombre del restaurante" />
+                        <TableColumn fx:id="ColumnUbicacion" prefWidth="87.0" text="Ubicación" />
+                      <TableColumn fx:id="ColumnMesa" prefWidth="85.0" text="Mesas" />
+                      <TableColumn fx:id="ColumnAforo" prefWidth="72.0" text="Aforo" />
                     </columns>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

@@ -18,6 +18,7 @@ import com.jfoenix.controls.JFXComboBox;
 import Clases.CategoriaRestaurante;
 import Clases.Cliente;
 import Clases.Restaurante;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -25,6 +26,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -150,14 +152,18 @@ public class controladorRestauranteReg {
             eliminarRestaurantePorNombre(restauranteSeleccionado.getNombreRestaurante());
             lista.remove(restauranteSeleccionado);
         } else {
-            // Muestra un mensaje de error si no hay ningún restaurante seleccionado
-            System.out.println("No hay ningún restaurante seleccionado");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("No hay ningún restaurante seleccionado");
+            alert.showAndWait();
+            return;
         }
     }
 
     @FXML
     void Salir(MouseEvent event) {
-
+    	Platform.exit();
     }
 
     @FXML

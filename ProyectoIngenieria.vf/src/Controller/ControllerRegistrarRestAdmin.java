@@ -18,6 +18,8 @@ import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -69,6 +71,7 @@ public class ControllerRegistrarRestAdmin {
     void RegistrarRest(ActionEvent event) {
         String categoriaSeleccionada = cbxCatRest.getSelectionModel().getSelectedItem();
         if (categoriaSeleccionada != null) {
+        	try {
         	Menu menu = new Menu();
          // Asume que la clase Menu tiene un constructor sin parámetros
         	ArrayList<Reserva> reservas = new ArrayList<>();
@@ -89,9 +92,21 @@ public class ControllerRegistrarRestAdmin {
             // Cierra la ventana actual
             Stage stage = (Stage) cbxCatRest.getScene().getWindow();
             stage.close();
-            
+        	} catch (NumberFormatException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setTitle("Error");
+                alert.setContentText("Dato no válido introducido");
+                alert.showAndWait();
+                return;
+        	}
         } else {
-            System.out.println("No hay ninguna categoría seleccionada");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("No ha elegido ninguna categoría");
+            alert.showAndWait();
+            return;
         }
     }
 
@@ -129,7 +144,7 @@ public class ControllerRegistrarRestAdmin {
 
     @FXML
     void Salir(MouseEvent event) {
-
+    	Platform.exit();
     }
 
     @FXML

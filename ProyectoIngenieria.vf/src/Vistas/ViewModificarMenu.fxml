@@ -28,7 +28,6 @@
                   <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                   <ImageView fitHeight="77.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
@@ -55,7 +54,7 @@
                         <Image url="@../../image/usuario.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblEditarMenu" onMouseClicked="#Restaurantes" text="EditarMenu" GridPane.rowIndex="2">
+                  <Label fx:id="lblEditarMenu" onMouseClicked="#Restaurantes" text="Editar menú" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -128,7 +127,7 @@
                   <RowConstraints maxHeight="268.0" minHeight="10.0" prefHeight="133.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label text="Menu" GridPane.halignment="CENTER">
+                  <Label text="Menú" GridPane.halignment="CENTER">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
@@ -150,8 +149,8 @@
                     <columns>
                       <TableColumn fx:id="columnid" prefWidth="75.0" text="id" />
                       <TableColumn fx:id="columnNombre" prefWidth="75.0" text="Nombre" />
-                        <TableColumn fx:id="columnDescripcion" prefWidth="123.0" text="Descripcion" />
-                        <TableColumn fx:id="columnPrecio" prefWidth="140.0" text="Precio" />
+                        <TableColumn fx:id="columnDescripcion" prefWidth="234.0" text="Descripción" />
+                        <TableColumn fx:id="columnPrecio" prefWidth="65.0" text="Precio" />
                     </columns>
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />

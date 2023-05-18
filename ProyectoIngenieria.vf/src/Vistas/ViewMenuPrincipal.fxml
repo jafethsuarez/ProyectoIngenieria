@@ -56,7 +56,7 @@
                         <Image url="@../../image/usuario.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblEditarMenu" onMouseClicked="#Restaurantes" text="EditarMenu" GridPane.rowIndex="2">
+                  <Label fx:id="lblEditarMenu" onMouseClicked="#Restaurantes" text="Editar menú" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>

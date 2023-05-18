@@ -28,7 +28,6 @@
                 <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <ImageView fitHeight="77.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
@@ -91,6 +90,9 @@
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                   <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                      <image>
@@ -104,6 +106,9 @@
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                </children>
             </GridPane>
@@ -141,11 +146,11 @@
                   <TableView fx:id="ReservasTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                     <columns>
                         <TableColumn fx:id="columnId" prefWidth="75.0" text="Id" />
-                      <TableColumn fx:id="ColumnFecha" prefWidth="75.0" text="fecha" />
-                      <TableColumn fx:id="ColumnHora" prefWidth="75.0" text="hora" />
-                        <TableColumn fx:id="ColumnCantidad" text="cantidad" />
-                        <TableColumn fx:id="ColumnMenu" prefWidth="234.0" text="menuSeleccionado" />
-                        <TableColumn fx:id="columnNombreRest" prefWidth="98.0" text="Restaurante" />
+                      <TableColumn fx:id="ColumnFecha" prefWidth="75.0" text="Fecha" />
+                      <TableColumn fx:id="ColumnHora" prefWidth="75.0" text="Hora" />
+                        <TableColumn fx:id="ColumnCantidad" text="Cantidad" />
+                        <TableColumn fx:id="ColumnMenu" prefWidth="143.0" text="Menú seleccionado" />
+                        <TableColumn fx:id="columnNombreRest" prefWidth="189.0" text="Restaurante" />
                     </columns>
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />

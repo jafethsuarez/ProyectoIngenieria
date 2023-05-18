@@ -65,6 +65,15 @@ public class ControllerRegistrar {
             return;
         }
         
+        if (txttelefono.getText().length() > 9) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Número de teléfono invalido");
+            alert.showAndWait();
+            return;
+        }
+        
      // Obtener la lista de categorías ya cargada
         Cliente cliente = new Cliente();
         ArrayList<CategoriaRestaurante> categorias = cliente.cargarCategorias("Categoria.json"); // Asegúrate de proporcionar la ruta correcta al archivo JSON de las categorías

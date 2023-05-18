@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -101,8 +102,12 @@ public class ControllerPrincipalAdmin {
     	        controlReg.eliminarClientePorId(clienteSeleccionado.getId());
     	        lista.remove(clienteSeleccionado);
     	    } else {
-    	        // Muestra un mensaje de error si no hay ningún cliente seleccionado
-    	        System.out.println("No hay ningún cliente seleccionado");
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setHeaderText(null);
+                alert.setTitle("Error");
+                alert.setContentText("No hay ningún cliente seleccionado");
+                alert.showAndWait();
+                return;
     	    }
     }
     @FXML

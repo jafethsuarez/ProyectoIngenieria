@@ -9,6 +9,8 @@ import Clases.Restaurante;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -69,10 +71,19 @@ public class ControllerActualizarMenu {
     @FXML
     void ActualizarMenu(ActionEvent event) {
         // Actualizar la información del Plato.
+    	try {
         plato.setNombre(txtnombre.getText());
         plato.setDescripcion(txtDescrip.getText());
         plato.setPrecio(Double.valueOf(txtPrecio.getText()));
-
+    	} catch (NumberFormatException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Número de teléfono invalido");
+            alert.showAndWait();
+            return;
+    	}
+        
         // Leer todas las Categorias del archivo JSON.
         PlatoManager manager = new PlatoManager();
         List<CategoriaRestaurante> categorias = manager.leerCategorias();
@@ -127,7 +138,7 @@ public class ControllerActualizarMenu {
 
     @FXML
     void Salir(MouseEvent event) {
-
+    	Platform.exit();
     }
 
     @FXML

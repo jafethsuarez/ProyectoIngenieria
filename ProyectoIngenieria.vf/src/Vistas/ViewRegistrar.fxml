@@ -27,7 +27,7 @@
       </VBox>
       <VBox alignment="CENTER" prefHeight="600.0" prefWidth="475.0" styleClass="body" stylesheets="@../CssStyle/Login.css" HBox.hgrow="ALWAYS">
          <children>
-            <Label alignment="CENTER" text="Registrar" VBox.vgrow="ALWAYS">
+            <Label alignment="CENTER" text="Registrate" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -47,22 +47,22 @@
                   <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="141.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXTextField fx:id="txtUsuario" text="Usuario">
+                  <JFXTextField fx:id="txtUsuario" promptText="Usuario">
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />
                      </GridPane.margin>
                   </JFXTextField>
-                  <JFXTextField fx:id="txtcontrasena" text="Contraseña" GridPane.rowIndex="1">
+                  <JFXTextField fx:id="txtcontrasena" promptText="Contraseña" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />
                      </GridPane.margin>
                   </JFXTextField>
-                  <JFXTextField fx:id="txtnombre" text="Nombre" GridPane.rowIndex="3">
+                  <JFXTextField fx:id="txtnombre" promptText="Nombre" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />
                      </GridPane.margin>
                   </JFXTextField>
-                  <JFXTextField fx:id="txttelefono" prefHeight="0.0" prefWidth="470.0" text="Telefono" GridPane.rowIndex="4">
+                  <JFXTextField fx:id="txttelefono" prefHeight="0.0" prefWidth="470.0" promptText="Teléfono" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />
                      </GridPane.margin>

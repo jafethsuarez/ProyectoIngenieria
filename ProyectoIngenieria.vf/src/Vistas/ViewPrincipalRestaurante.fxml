@@ -29,7 +29,6 @@
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <ImageView fitHeight="77.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
@@ -56,7 +55,7 @@
                         <Image url="@../../image/usuario.png" />
                      </image>
                   </ImageView>
-                  <Label onMouseClicked="#EditarMenu" text="EditarMenu" GridPane.rowIndex="2">
+                  <Label onMouseClicked="#EditarMenu" text="Editar menú" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -92,6 +91,9 @@
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                   <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
                      <image>
@@ -105,8 +107,11 @@
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
-                  <Label onMouseClicked="#etadisticas" text="Estadisticas" GridPane.rowIndex="4">
+                  <Label onMouseClicked="#etadisticas" text="Estadísticas" GridPane.rowIndex="4">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -138,7 +143,7 @@
                 <RowConstraints maxHeight="268.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Reservar realizadas" GridPane.halignment="CENTER">
+                  <Label text="Reservas realizadas" GridPane.halignment="CENTER">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
@@ -152,7 +157,7 @@
                       <TableColumn fx:id="columnFecha" prefWidth="75.0" text="Fecha" />
                         <TableColumn fx:id="columnHora" prefWidth="75.0" text="Hora" />
                         <TableColumn fx:id="columncant" prefWidth="75.0" text="Cantidad" />
-                        <TableColumn fx:id="columnMenu" prefWidth="75.0" text="Menu" />
+                        <TableColumn fx:id="columnMenu" prefWidth="149.0" text="Menú" />
                     </columns>
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />

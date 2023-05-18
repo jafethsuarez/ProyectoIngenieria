@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerModificarRes" >
+<HBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerModificarRes">
    <children>
       <VBox prefHeight="600.0" prefWidth="310.0" HBox.hgrow="ALWAYS">
          <children>
@@ -29,7 +29,6 @@
                 <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <ImageView fitHeight="77.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
@@ -92,6 +91,9 @@
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                   <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                      <image>
@@ -143,13 +145,25 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Hora :" GridPane.rowIndex="1" />
-                        <Label text="Menu :" GridPane.rowIndex="2" />
-                        <Label text="Fecha:" />
+                        <Label text="Hora:" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Menú:" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Fecha:">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
                         <JFXDatePicker fx:id="DatePickerRe" onAction="#CalendarioRe" GridPane.columnIndex="1" />
                         <JFXComboBox fx:id="CbxHoraRes" onAction="#MostrarHora" prefHeight="31.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <JFXListView fx:id="ListMenuRes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="Cantidad de personas:" GridPane.rowIndex="3" />
+                        <Label text="Nº de personas:" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
                         <JFXComboBox fx:id="cbxCant" onAction="#MostrarCant" prefHeight="31.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
