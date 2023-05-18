@@ -1,5 +1,5 @@
 {
-  "Mc Donald": [
+  "MrDonalds": [
     {
       "id": 1,
       "fecha": {
@@ -12,12 +12,12 @@
       "menuSeleccionado": [
         "Big Mac - 10.5€"
       ],
-      "nombreRest": "Mc Donald"
+      "nombreRest": "MrDonalds"
     }
   ],
   "Bistro 45": [],
   "Sushi Go": [],
-  "BURGER KING": [
+  "Kurger Bing": [
     {
       "id": 2,
       "fecha": {
@@ -30,7 +30,7 @@
       "menuSeleccionado": [
         "Carne Burger - 25.0€"
       ],
-      "nombreRest": "BURGER KING"
+      "nombreRest": "Kurger Bing"
     }
   ],
   "Tierra Burrito": [
