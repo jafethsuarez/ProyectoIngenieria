@@ -62,67 +62,78 @@ public class ControllerAgregarMenu {
        
     }
 
-    @FXML
-    void AgregarMenu(ActionEvent event) {
-        String nombre = txtnombreMenu.getText();
-        String descripcion = txtDescripMen.getText();
-        double precio;
-        try {
-            precio = Double.parseDouble(txtPrecioMen.getText());
-        } catch (NumberFormatException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setTitle("Error");
-            alert.setContentText("Precio inválido, introduce un número");
-            alert.showAndWait();
-            return;
-        }
+	@FXML
+	void AgregarMenu(ActionEvent event) {
+		String nombre = txtnombreMenu.getText();
+		String descripcion = txtDescripMen.getText();
+		double precio;
+		
+		
+		//Checkea si es null alguno de los campos
+		if ((txtnombreMenu.getText().isEmpty()) || (txtDescripMen.getText().isEmpty()) || (txtPrecioMen.getText().isEmpty())) {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("Rellena todos los campos");
+			alert.showAndWait();
+		} else {
+			//Checkea si el precio es un double
+			try {
+				precio = Double.parseDouble(txtPrecioMen.getText());
+			} catch (NumberFormatException e) {
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+				alert.setHeaderText(null);
+				alert.setTitle("Error");
+				alert.setContentText("Precio inválido, introduce un número");
+				alert.showAndWait();
+				return;
+			}
 
-        PlatoManager platoManager = new PlatoManager();
-        List<CategoriaRestaurante> categorias = platoManager.leerCategorias();
+			PlatoManager platoManager = new PlatoManager();
+			List<CategoriaRestaurante> categorias = platoManager.leerCategorias();
 
-        for (CategoriaRestaurante categoria : categorias) {
-            for (Restaurante restaurante : categoria.getRestaurantes()) {
-                if (this.restaurante.getNombreRestaurante().equals(restaurante.getNombreRestaurante())) {
-                    Menu menu = restaurante.getMenu();
-                    // Si el restaurante no tiene un menú, crea uno nuevo
-                    if (menu == null) {
-                        menu = new Menu();
-                        restaurante.setMenu(menu);
-                    }
-                    List<Plato> platos = menu.getPlatos();
-                    // Si el menú no tiene platos, crea una nueva lista de platos
-                    if (platos == null) {
-                        platos = new ArrayList<>();
-                        menu.setPlatos(platos);
-                    }
-                    
-                    // Aquí debes decidir cómo quieres asignar el ID al nuevo plato
-                    int id = platos.size() + 1;
-                    
-                    Plato nuevoPlato = new Plato(id, nombre, descripcion, precio);
-                    platos.add(nuevoPlato);
+			for (CategoriaRestaurante categoria : categorias) {
+				for (Restaurante restaurante : categoria.getRestaurantes()) {
+					if (this.restaurante.getNombreRestaurante().equals(restaurante.getNombreRestaurante())) {
+						Menu menu = restaurante.getMenu();
+						// Si el restaurante no tiene un menú, crea uno nuevo
+						if (menu == null) {
+							menu = new Menu();
+							restaurante.setMenu(menu);
+						}
+						List<Plato> platos = menu.getPlatos();
+						// Si el menú no tiene platos, crea una nueva lista de platos
+						if (platos == null) {
+							platos = new ArrayList<>();
+							menu.setPlatos(platos);
+						}
 
-                    platoManager.escribirCategorias(categorias);
-                    
-                    // Mostrar un mensaje emergente indicando que el registro ha sido exitoso.
-                    Alert alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Información");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Registro realizado con éxito");
-                    alert.showAndWait();
+						// Aquí debes decidir cómo quieres asignar el ID al nuevo plato
+						int id = platos.size() + 1;
 
-                    // Cerrar la ventana.
-                    Stage stage = (Stage) txtnombreMenu.getScene().getWindow();
-                    stage.close();
-                    return;
-                    
-                }
-            }
-        }
-        
-       
-    }
+						Plato nuevoPlato = new Plato(id, nombre, descripcion, precio);
+						platos.add(nuevoPlato);
+
+						platoManager.escribirCategorias(categorias);
+
+						// Mostrar un mensaje emergente indicando que el registro ha sido exitoso.
+						Alert alert = new Alert(AlertType.INFORMATION);
+						alert.setTitle("Información");
+						alert.setHeaderText(null);
+						alert.setContentText("Registro realizado con éxito");
+						alert.showAndWait();
+
+						// Cerrar la ventana.
+						Stage stage = (Stage) txtnombreMenu.getScene().getWindow();
+						stage.close();
+						return;
+
+					}
+
+				}
+			}
+		}
+	}
 
 
 
@@ -144,7 +155,8 @@ public class ControllerAgregarMenu {
 
     @FXML
     void Salir(MouseEvent event) {
-    	Platform.exit();
+	    Stage currentStage = (Stage) lblCliente.getScene().getWindow();
+	    currentStage.close();
     }
 
     @FXML

@@ -13,15 +13,27 @@
               "precio": 16.0
             },
             {
-              "id": 3,
+              "id": 2,
               "nombre": "Doble cheese",
               "descripcion": "Doble carne con extra queso",
               "precio": 12.0
             },
             {
+              "id": 3,
+              "nombre": "Combo de entrantes gigante",
+              "descripcion": "Combo completo con patatas",
+              "precio": 13.0
+            },
+            {
               "id": 4,
-              "nombre": "Cheeseburger Extra",
-              "descripcion": "Cheeseburger con una carne extra",
+              "nombre": "Chicken Burger",
+              "descripcion": "Hamburguesa con pollo frito jugoso",
+              "precio": 12.0
+            },
+            {
+              "id": 5,
+              "nombre": "Double Combo",
+              "descripcion": "Combo doble",
               "precio": 12.0
             }
           ]
@@ -116,6 +128,25 @@
         "usuario": "Bistro45",
         "contrasena": "bistro123",
         "ubicacion": "Valencia"
+      },
+      {
+        "nombreRestaurante": "NewAge",
+        "menu": {
+          "platos": [
+            {
+              "id": 1,
+              "nombre": "Combo entrantes",
+              "descripcion": "Torreznos, callos y oreja a la plancha",
+              "precio": 15.0
+            }
+          ]
+        },
+        "reservas": [],
+        "mesa": 10,
+        "aforo": 20,
+        "usuario": "newage",
+        "contrasena": "456789",
+        "ubicacion": "Madrid"
       }
     ]
   },

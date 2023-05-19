@@ -13,6 +13,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 public class ControllerPrincipalMenu {
 
@@ -80,7 +81,8 @@ public class ControllerPrincipalMenu {
 
     @FXML
     void Salir(MouseEvent event) {
-
+	    Stage currentStage = (Stage) lblCliente.getScene().getWindow();
+	    currentStage.close();
     }
 
     @FXML

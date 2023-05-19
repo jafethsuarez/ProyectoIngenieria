@@ -30,6 +30,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -94,6 +95,7 @@ public class ControllerPrincipalRest {
     void EditarMenu(MouseEvent event) {
         try {
             // Crea el FXMLLoader
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader loaderRestaurante = new FXMLLoader();
 
             // Asigna el archivo FXML al FXMLLoader
@@ -110,6 +112,8 @@ public class ControllerPrincipalRest {
             Stage stage = new Stage();
             stage.setScene(new Scene(rootRest));
             stage.show();
+            
+            stageActual.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -170,6 +174,9 @@ public class ControllerPrincipalRest {
     @FXML
     void etadisticas(MouseEvent event) {
         try {
+        	
+            // Crea el FXMLLoader
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
             // Crea el FXMLLoader
             FXMLLoader loader = new FXMLLoader();
 
@@ -187,6 +194,8 @@ public class ControllerPrincipalRest {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
+            
+            stageActual.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -194,7 +203,8 @@ public class ControllerPrincipalRest {
 
     @FXML
     void Salir(MouseEvent event) {
-
+	    Stage currentStage = (Stage) lblCliente.getScene().getWindow();
+	    currentStage.close();
     }
     
     private void loadReservations() {

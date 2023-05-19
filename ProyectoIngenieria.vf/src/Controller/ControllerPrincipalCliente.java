@@ -33,6 +33,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -94,6 +95,9 @@ public class ControllerPrincipalCliente {
         }
 
         try {
+            // Obtener la referencia al objeto Stage de la pantalla actual
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
             FXMLLoader loaderReservasRegCli = new FXMLLoader(getClass().getResource("/Vistas/ViewMostrarReservaCli.fxml"));
             Parent rootReservasRegCli = loaderReservasRegCli.load();
             
@@ -104,6 +108,9 @@ public class ControllerPrincipalCliente {
             Stage stage = new Stage();
             stage.setScene(new Scene(rootReservasRegCli));
             stage.show();
+            
+            // Cerrar la pantalla actual
+            stageActual.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -117,8 +124,10 @@ public class ControllerPrincipalCliente {
 
     @FXML
     void Salir(MouseEvent event) {
-
+	    Stage currentStage = (Stage) lblCliente.getScene().getWindow();
+	    currentStage.close();
     }
+    
     private String readFile(String fileName) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
         StringBuilder stringBuilder = new StringBuilder();

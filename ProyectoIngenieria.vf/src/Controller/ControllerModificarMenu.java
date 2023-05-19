@@ -96,7 +96,7 @@ public class ControllerModificarMenu {
             // Aquí puedes pasar cualquier dato que necesites a la nueva vista, por ejemplo:
             controller.setRestaurante(restaurante);
 
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
@@ -164,7 +164,7 @@ public class ControllerModificarMenu {
                 controller.setRestaurante(restaurante);
                 
                 // Aquí se abre la nueva vista
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Stage stage = new Stage();
                 stage.setScene(new Scene(root));
                 stage.show();
             } catch (IOException e) {
@@ -179,22 +179,85 @@ public class ControllerModificarMenu {
 
     @FXML
     void PanelCliente(MouseEvent event) {
-
+    	
     }
 
     @FXML
     void Reservas(MouseEvent event) {
+        try {
+        	
+            // Obtener la referencia al objeto Stage de la pantalla actual
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Crea el controlador
+            ControllerPrincipalRest controlRest = new ControllerPrincipalRest();
+            controlRest.setRestaurante(restaurante);
 
+            // Crea el FXMLLoader
+            FXMLLoader loaderRestaurante = new FXMLLoader();
+
+            // Asigna el controlador al FXMLLoader
+            loaderRestaurante.setController(controlRest);
+
+            // Asigna el archivo FXML al FXMLLoader
+            loaderRestaurante.setLocation(getClass().getResource("/Vistas/ViewPrincipalRestaurante.fxml"));
+
+            // Carga la vista desde el archivo FXML
+            Parent rootRest = loaderRestaurante.load();
+
+            // Cierra la ventana actual y muestra la nueva vista en un escenario
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rootRest));
+            stage.show();
+            
+            // Cerrar la pantalla actual
+            stageActual.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    @FXML
-    void Restaurantes(MouseEvent event) {
 
+    
+    @FXML
+    void EditarMenu(MouseEvent event) {
+        //no hace nada porque ya esta en el menu
     }
 
     @FXML
     void Salir(MouseEvent event) {
+	    Stage currentStage = (Stage) lblCliente.getScene().getWindow();
+	    currentStage.close();
+    }
+    
+    @FXML
+    void etadisticas(MouseEvent event) {
+        try {
+        	
+            // Crea el FXMLLoader
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            // Crea el FXMLLoader
+            FXMLLoader loader = new FXMLLoader();
 
+            // Asigna el archivo FXML al FXMLLoader
+            loader.setLocation(getClass().getResource("/Vistas/ViewEstadisticasRest.fxml"));
+
+            // Carga la vista desde el archivo FXML
+            Parent root = loader.load();
+
+            // Obtén el controlador y asigna el restaurante
+            ControllerEstadisticasRest controller = loader.getController();
+            controller.setRestaurante(restaurante);
+
+            // Crea un nuevo Stage para mostrar la vista
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+            
+            stageActual.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

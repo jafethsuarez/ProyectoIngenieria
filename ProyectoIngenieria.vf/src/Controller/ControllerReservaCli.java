@@ -220,7 +220,8 @@ public class ControllerReservaCli {
 
     @FXML
     void Salir(MouseEvent event) {
-
+	    Stage currentStage = (Stage) lblCliente.getScene().getWindow();
+	    currentStage.close();
     }
 
     @FXML

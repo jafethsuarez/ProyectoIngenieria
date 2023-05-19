@@ -15,6 +15,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.jfoenix.controls.JFXComboBox;
 
+import Clases.Administrador;
 import Clases.CategoriaRestaurante;
 import Clases.Cliente;
 import Clases.Restaurante;
@@ -76,7 +77,17 @@ public class controladorRestauranteReg {
 
     ObservableList<Restaurante> lista = FXCollections.observableArrayList();
     String adminUsername = "";
-
+    
+    Administrador administrador;
+    
+    public void setAdminData(Administrador administrador) {
+        if (administrador != null) {
+            this.administrador = administrador;
+            System.out.println("setAdminData: " + administrador.getUsuario());
+            actualizarLabelAdmin();
+        }
+    }
+    
     public void actualizarLabelAdmin() {
         Admin.setText(adminUsername);
     }
@@ -163,12 +174,36 @@ public class controladorRestauranteReg {
 
     @FXML
     void Salir(MouseEvent event) {
-    	Platform.exit();
+	    // Obteniendo la ventana (Stage) actual a través del botón y cerrándola
+	    Stage currentStage = (Stage) Admin.getScene().getWindow();
+	    currentStage.close();
     }
 
     @FXML
     void clientes(MouseEvent event) {
+        try {
+            // Obtener la referencia al objeto Stage de la pantalla actual
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+            FXMLLoader loaderRegCli = new FXMLLoader(getClass().getResource("/Vistas/ViewClientesReg.fxml"));
+            controladorClienteReg controladorRegCli = new controladorClienteReg();
+            
+            // Pasar el objeto Administrador al controladorClienteReg
+            controladorRegCli.setAdminData(administrador);
+
+            loaderRegCli.setController(controladorRegCli);
+            Parent rootRegCli = loaderRegCli.load();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rootRegCli));
+            stage.show();
+
+            // Cerrar la pantalla actual
+            stageActual.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

@@ -70,6 +70,14 @@ public class ControllerActualizarMenu {
 
     @FXML
     void ActualizarMenu(ActionEvent event) {
+		//Checkea si es null alguno de los  campos
+		if ((txtnombre.getText().isEmpty()) || (txtDescrip.getText().isEmpty()) || txtPrecio.getText().isEmpty()) {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("Rellena todos los campos");
+			alert.showAndWait();
+		} else {
         // Actualizar la información del Plato.
     	try {
         plato.setNombre(txtnombre.getText());
@@ -118,6 +126,7 @@ public class ControllerActualizarMenu {
         // Cerrar la ventana.
         Stage stage = (Stage) btnModificar.getScene().getWindow();
         stage.close();
+		}
     }
 
 
@@ -128,7 +137,7 @@ public class ControllerActualizarMenu {
 
     @FXML
     void Reservas(MouseEvent event) {
-
+    	
     }
 
     @FXML
@@ -138,7 +147,8 @@ public class ControllerActualizarMenu {
 
     @FXML
     void Salir(MouseEvent event) {
-    	Platform.exit();
+	    Stage currentStage = (Stage) lblCliente.getScene().getWindow();
+	    currentStage.close();
     }
 
     @FXML

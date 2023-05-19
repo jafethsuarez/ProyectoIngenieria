@@ -32,6 +32,8 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.application.Platform;
 
@@ -179,12 +181,30 @@ public class ControllerReservasRegCli {
 
     @FXML
     void Restaurantes(MouseEvent event) {
+		  try {
+	           // Obtener la referencia al objeto Stage de la pantalla actual
+	            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	            
+	            FXMLLoader loaderCli = new FXMLLoader(getClass().getResource("/Vistas/ViewPrincipalCliente.fxml"));
+	            ControllerPrincipalCliente controlCli = new ControllerPrincipalCliente();
+	            controlCli.setCliente(cliente);
+	            controlCli.setRestaurante(restaurante);
+	            loaderCli.setController(controlCli);
+	            Parent rootCli = loaderCli.load();
 
+	            Stage stage = new Stage();
+	            stage.setScene(new Scene(rootCli));
+	            stage.show();
+	            stageActual.close();
+	        } catch (Exception e) {
+	        	e.printStackTrace();
+	        }
     }
 
     @FXML
     void Salir(MouseEvent event) {
-
+	    Stage currentStage = (Stage) BtnCancelar.getScene().getWindow();
+	    currentStage.close();
     }
 
     @FXML

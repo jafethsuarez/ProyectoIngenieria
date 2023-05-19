@@ -24,6 +24,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
@@ -70,7 +74,15 @@ public class ControllerRegistrarRestAdmin {
     @FXML
     void RegistrarRest(ActionEvent event) {
         String categoriaSeleccionada = cbxCatRest.getSelectionModel().getSelectedItem();
-        if (categoriaSeleccionada != null) {
+        if (categoriaSeleccionada == null || txtusuario.getText().isEmpty() || txtContraseña.getText().isEmpty() || txtubicacion.getText().isEmpty() 
+        		|| txtnombreRest.getText().isEmpty() || txtmesa.getText().isEmpty() || txtaforo.getText().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Rellene todos los campos");
+            alert.showAndWait();
+            return;
+        } else {
         	try {
         	Menu menu = new Menu();
          // Asume que la clase Menu tiene un constructor sin parámetros
@@ -100,13 +112,8 @@ public class ControllerRegistrarRestAdmin {
                 alert.showAndWait();
                 return;
         	}
-        } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setTitle("Error");
-            alert.setContentText("No ha elegido ninguna categoría");
-            alert.showAndWait();
-            return;
+        	
+
         }
     }
 
@@ -144,17 +151,59 @@ public class ControllerRegistrarRestAdmin {
 
     @FXML
     void Salir(MouseEvent event) {
-    	Platform.exit();
+	    Stage currentStage = (Stage) Admin.getScene().getWindow();
+	    currentStage.close();
     }
 
     @FXML
     void clientes(MouseEvent event) {
+        try {
+            // Obtener la referencia al objeto Stage de la pantalla actual
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+            FXMLLoader loaderRegCli = new FXMLLoader(getClass().getResource("/Vistas/ViewClientesReg.fxml"));
+            controladorClienteReg controladorRegCli = new controladorClienteReg();
+            
+
+            loaderRegCli.setController(controladorRegCli);
+            Parent rootRegCli = loaderRegCli.load();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rootRegCli));
+            stage.show();
+
+            // Cerrar la pantalla actual
+            stageActual.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void restaurantes(MouseEvent event) {
+        try {
+            // Obtener la referencia al objeto Stage de la pantalla actual
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+            FXMLLoader loaderRegRest = new FXMLLoader(getClass().getResource("/Vistas/ViewRestaurantesRegistrados.fxml"));
+            controladorRestauranteReg controladorRegRest = new controladorRestauranteReg();
+
+            loaderRegRest.setController(controladorRegRest);
+            Parent rootRegRest = loaderRegRest.load();
+            
+            controladorRegRest.actualizarLabelAdmin();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(rootRegRest));
+            stage.show();
+
+            // Cerrar la pantalla actual
+            stageActual.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

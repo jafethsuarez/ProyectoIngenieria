@@ -18,7 +18,7 @@
    <children>
       <VBox prefHeight="600.0" prefWidth="310.0" HBox.hgrow="ALWAYS">
          <children>
-            <GridPane prefHeight="598.0" prefWidth="310.0" styleClass="root" stylesheets="@../CssStyle/Login.css" VBox.vgrow="ALWAYS">
+            <GridPane prefHeight="598.0" prefWidth="310.0" styleClass="root" stylesheets="@../CssStyle/Login.css">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
@@ -26,6 +26,7 @@
                   <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
                </rowConstraints>
@@ -54,7 +55,7 @@
                         <Image url="@../../image/usuario.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblEditarMenu" onMouseClicked="#Restaurantes" text="Editar menú" GridPane.rowIndex="2">
+                  <Label onMouseClicked="#EditarMenu" text="Editar menú" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -78,7 +79,7 @@
                         <Insets left="20.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <Label fx:id="lblReservas" onMouseClicked="#Reservas" text="Reservas" GridPane.rowIndex="3">
+                  <Label onMouseClicked="#Reservas" text="Reservas" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -86,7 +87,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblCliente" onMouseClicked="#PanelCliente" text="Cliente" GridPane.rowIndex="1">
+                  <Label fx:id="lblCliente" text="Cliente" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -94,7 +95,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                  <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
                      <image>
                         <Image url="@../../image/salida.png" />
                      </image>
@@ -102,7 +103,7 @@
                         <Insets left="20.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <Label onMouseClicked="#Salir" text="Salir" GridPane.rowIndex="4">
+                  <Label onMouseClicked="#Salir" text="Salir " GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin>
@@ -110,6 +111,22 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
+                  <Label onMouseClicked="#etadisticas" text="Estadísticas" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="100.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ImageView fitHeight="64.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../../image/analitica.png" />
+                     </image>
+                  </ImageView>
                </children>
             </GridPane>
          </children>

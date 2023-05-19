@@ -66,6 +66,10 @@ public class controladorClienteReg {
 	    @FXML
 	    private TableColumn<Cliente, Integer> ColumnTelefo;
 	    
+	    public void setAdminUsername(String adminUsername) {
+	        this.Admin2.setText(adminUsername);
+	    }
+	    
 	    String adminUsername = "";
 
 	    Administrador administrador;
@@ -184,7 +188,6 @@ public class controladorClienteReg {
 	            loaderRegRest.setController(controladorRegRest);
 	            Parent rootRegRest = loaderRegRest.load();
 	            
-	            controladorRegRest.setAdminUsername(adminUsername);
 	            controladorRegRest.actualizarLabelAdmin();
 
 	            Stage stage = new Stage();
