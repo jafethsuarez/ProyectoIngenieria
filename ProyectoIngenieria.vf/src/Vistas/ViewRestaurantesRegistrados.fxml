@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -123,9 +124,10 @@
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="440.0" minHeight="10.0" prefHeight="427.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="447.0" minHeight="10.0" prefHeight="383.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label prefHeight="69.0" prefWidth="401.0" text="Restaurantes Registrados" GridPane.halignment="CENTER">
@@ -147,16 +149,26 @@
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </GridPane.margin>
                   </TableView>
-                  <JFXButton onAction="#BtnEliminar" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Eliminar" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                  <JFXButton onAction="#BtnEliminar" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Eliminar" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin></JFXButton>
                   <JFXComboBox fx:id="cbxCatRest" onAction="#CatRest" prefHeight="31.0" prefWidth="182.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <JFXButton onAction="#RegistrarRest" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Registrar" GridPane.rowIndex="3">
+                  <JFXButton onAction="#RegistrarRest" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Registrar" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="150.0" />
                      </GridPane.margin>
                   </JFXButton>
+                  <Label text="Numero de restaurantes registrados:" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="numRestaurantesRegistrados" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="300.0" right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
                </children>
             </GridPane>
          </children>

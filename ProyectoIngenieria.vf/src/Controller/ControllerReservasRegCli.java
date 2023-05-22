@@ -50,8 +50,7 @@ public class ControllerReservasRegCli {
 
     @FXML
     private TableView<Reserva> ReservasTableView;
-    @FXML
-    private TableColumn<Reserva, Integer> columnId;
+
 
     @FXML
     private TableColumn<Reserva, Fecha> ColumnFecha;
@@ -66,6 +65,8 @@ public class ControllerReservasRegCli {
     private TableColumn<Reserva, String> ColumnMenu;
     @FXML
     private TableColumn<Reserva, String> columnNombreRest;
+    
+    
 
     private Cliente cliente;
     private Restaurante restaurante;
@@ -209,7 +210,6 @@ public class ControllerReservasRegCli {
 
     @FXML
     void initialize() {
-        columnId.setCellValueFactory(new PropertyValueFactory<>("id"));
         ColumnFecha.setCellValueFactory(new PropertyValueFactory<>("fecha"));
         ColumnHora.setCellValueFactory(new PropertyValueFactory<>("hora"));
         ColumnCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidad"));

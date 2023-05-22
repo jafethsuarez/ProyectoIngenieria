@@ -25,6 +25,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import java.io.FileWriter;
@@ -108,10 +110,7 @@ public class ControllerReservaCli {
 
     }
 
-    @FXML
-    void MostrarHora(ActionEvent event) {
 
-    }
     
     @FXML
     void ReservarRest(ActionEvent event) {
@@ -124,6 +123,20 @@ public class ControllerReservaCli {
             alert.showAndWait();
             return;
         }
+        
+        
+        LocalDateTime now = LocalDateTime.now(); 
+        String[] hora = CbxHora.getValue().split(":");
+        LocalDateTime fechaEscogida = LocalDateTime.of(DatePicker.getValue().getYear(), DatePicker.getValue().getMonthValue(), 
+        		                                       DatePicker.getValue().getDayOfMonth(), Integer.parseInt(hora[0]), Integer.parseInt(hora[1]));
+        if (fechaEscogida.isBefore(now)) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Información incompleta");
+            alert.setHeaderText(null);
+            alert.setContentText("La fecha no es válida, tiene que ser después de ahora.");
+            alert.showAndWait();
+            return;
+        } 
 
         // Crear una reserva con los datos del formulario
         Reserva reserva = new Reserva();

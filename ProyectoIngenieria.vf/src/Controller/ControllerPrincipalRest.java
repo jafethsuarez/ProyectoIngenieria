@@ -67,8 +67,7 @@ public class ControllerPrincipalRest {
     @FXML
     private TableView<Reserva> TableReservasCli;
 
-    @FXML
-    private TableColumn<Reserva, String> ColumnIdCliente;
+
 
     @FXML
     private TableColumn<Reserva, LocalDate> columnFecha;
@@ -260,7 +259,6 @@ public class ControllerPrincipalRest {
 
     @FXML
     void initialize() {
-    	 ColumnIdCliente.setCellValueFactory(new PropertyValueFactory<>("id"));
          columnFecha.setCellValueFactory(new PropertyValueFactory<>("fecha"));
          columnHora.setCellValueFactory(new PropertyValueFactory<>("hora"));
          columncant.setCellValueFactory(new PropertyValueFactory<>("cantidad"));

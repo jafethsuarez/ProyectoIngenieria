@@ -37,7 +37,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Date;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -83,7 +88,9 @@ public class ControllerModificarRes {
     
     private Cliente cliente;
     private Restaurante restaurante;
-
+    
+    LocalDateTime now = LocalDateTime.now();  
+    
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
@@ -137,7 +144,20 @@ public class ControllerModificarRes {
             alert.showAndWait();
             return;
         }
-
+        
+        LocalDateTime now = LocalDateTime.now(); 
+        String[] hora = CbxHoraRes.getValue().split(":");
+        LocalDateTime fechaEscogida = LocalDateTime.of(DatePickerRe.getValue().getYear(), DatePickerRe.getValue().getMonthValue(), 
+        		DatePickerRe.getValue().getDayOfMonth(), Integer.parseInt(hora[0]), Integer.parseInt(hora[1]));
+        if (fechaEscogida.isBefore(now)) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Información incompleta");
+            alert.setHeaderText(null);
+            alert.setContentText("La fecha no es válida, tiene que ser después de ahora.");
+            alert.showAndWait();
+            return;
+        } 
+       
         // Actualizar la reserva con los nuevos valores
         reserva.setFecha(new Fecha(DatePickerRe.getValue().getYear(), DatePickerRe.getValue().getMonthValue(), DatePickerRe.getValue().getDayOfMonth()));
         reserva.setHora(CbxHoraRes.getValue());
@@ -246,5 +266,6 @@ public class ControllerModificarRes {
                 // Aquí puedes agregar el código que se ejecutará después de seleccionar una fecha
             }
         });
+
     }
 }

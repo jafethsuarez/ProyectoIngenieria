@@ -145,11 +145,10 @@
                   </JFXButton>
                   <TableView fx:id="ReservasTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                     <columns>
-                        <TableColumn fx:id="columnId" prefWidth="75.0" text="Id" />
-                      <TableColumn fx:id="ColumnFecha" prefWidth="75.0" text="Fecha" />
-                      <TableColumn fx:id="ColumnHora" prefWidth="75.0" text="Hora" />
-                        <TableColumn fx:id="ColumnCantidad" text="Cantidad" />
-                        <TableColumn fx:id="ColumnMenu" prefWidth="143.0" text="Menú seleccionado" />
+                      <TableColumn fx:id="ColumnFecha" prefWidth="88.0" text="Fecha" />
+                      <TableColumn fx:id="ColumnHora" prefWidth="53.0" text="Hora" />
+                        <TableColumn fx:id="ColumnCantidad" prefWidth="81.0" text="Cantidad" />
+                        <TableColumn fx:id="ColumnMenu" prefWidth="151.0" text="Menú seleccionado" />
                         <TableColumn fx:id="columnNombreRest" prefWidth="189.0" text="Restaurante" />
                     </columns>
                      <GridPane.margin>

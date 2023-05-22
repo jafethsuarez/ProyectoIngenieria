@@ -153,11 +153,10 @@
                   </Label>
                   <TableView fx:id="TableReservasCli" prefHeight="311.0" prefWidth="450.0" GridPane.rowIndex="1">
                     <columns>
-                      <TableColumn fx:id="ColumnIdCliente" prefWidth="75.0" text="id" />
-                      <TableColumn fx:id="columnFecha" prefWidth="75.0" text="Fecha" />
-                        <TableColumn fx:id="columnHora" prefWidth="75.0" text="Hora" />
-                        <TableColumn fx:id="columncant" prefWidth="75.0" text="Cantidad" />
-                        <TableColumn fx:id="columnMenu" prefWidth="149.0" text="Menú" />
+                      <TableColumn fx:id="columnFecha" prefWidth="102.0" text="Fecha" />
+                        <TableColumn fx:id="columnHora" prefWidth="69.0" text="Hora" />
+                        <TableColumn fx:id="columncant" prefWidth="89.0" text="Cantidad" />
+                        <TableColumn fx:id="columnMenu" prefWidth="189.0" text="Menú" />
                     </columns>
                      <GridPane.margin>
                         <Insets left="20.0" right="20.0" />

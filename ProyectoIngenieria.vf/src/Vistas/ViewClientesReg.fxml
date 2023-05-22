@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -121,9 +122,10 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="377.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="416.0" minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label text="Clientes Registrados" GridPane.halignment="CENTER">
@@ -137,15 +139,25 @@
                   <TableView fx:id="TableCliente" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                     <columns>
                         <TableColumn fx:id="ColumnId" prefWidth="75.0" text="Id" />
-                        <TableColumn fx:id="ColumnUbi" prefWidth="101.0" text="Ubicacion" />
+                        <TableColumn fx:id="ColumnUbi" prefWidth="101.0" text="Ubicación" />
                       <TableColumn fx:id="ColumnUsuario" prefWidth="119.0" text="Usuario" />
-                      <TableColumn fx:id="ColumnTelefo" prefWidth="163.0" text="Telefono" />
+                      <TableColumn fx:id="ColumnTelefo" prefWidth="163.0" text="Teléfono" />
                     </columns>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </GridPane.margin>
                   </TableView>
                   <JFXButton onAction="#BtnEliminar" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Eliminar" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label text="Número de clientes registrados:" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="clientesRegistrados" editable="false" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="250.0" right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
                </children>
             </GridPane>
          </children>

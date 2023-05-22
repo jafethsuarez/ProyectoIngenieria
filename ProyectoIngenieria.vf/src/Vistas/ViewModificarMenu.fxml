@@ -164,8 +164,8 @@
                   </Label>
                   <TableView fx:id="TableViewMenu" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                     <columns>
-                      <TableColumn fx:id="columnid" prefWidth="75.0" text="id" />
-                      <TableColumn fx:id="columnNombre" prefWidth="75.0" text="Nombre" />
+                      <TableColumn fx:id="columnid" prefWidth="29.0" text="id" />
+                      <TableColumn fx:id="columnNombre" prefWidth="121.0" text="Nombre" />
                         <TableColumn fx:id="columnDescripcion" prefWidth="234.0" text="Descripción" />
                         <TableColumn fx:id="columnPrecio" prefWidth="65.0" text="Precio" />
                     </columns>

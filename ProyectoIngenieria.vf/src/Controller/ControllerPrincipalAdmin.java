@@ -17,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -42,6 +43,9 @@ public class ControllerPrincipalAdmin {
 
     @FXML
     private TableColumn<Cliente, String> ColumnUsuario; // Cambiado de Integer a String
+    
+    @FXML
+    private TextField clientesRegistrados;
     
     private Stage stage;
 
@@ -175,5 +179,6 @@ public class ControllerPrincipalAdmin {
     @FXML
     void initialize() {
         ingresarDatos();
+        clientesRegistrados.setText(Integer.toString(lista.size())); //Numero de clientes registrados a partir del observableList size
     }
 }

@@ -31,6 +31,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -65,6 +66,11 @@ public class controladorRestauranteReg {
 
     @FXML
     private JFXComboBox<String> cbxCatRest;
+    
+    @FXML
+    private TextField numRestaurantesRegistrados;
+    
+
 
     @FXML
     void CatRest(ActionEvent event) {
@@ -76,7 +82,7 @@ public class controladorRestauranteReg {
     }
 
     ObservableList<Restaurante> lista = FXCollections.observableArrayList();
-    String adminUsername = "";
+    String adminUsername = "Admin";
     
     Administrador administrador;
     
@@ -87,10 +93,15 @@ public class controladorRestauranteReg {
             actualizarLabelAdmin();
         }
     }
-    
-    public void actualizarLabelAdmin() {
-        Admin.setText(adminUsername);
-    }
+
+	public void actualizarLabelAdmin() {
+		if (adminUsername != null || adminUsername.isEmpty()) {
+			Admin.setText(adminUsername);
+		} else {
+			Admin.setText("Marcos");
+		}
+
+	}
 
     public void cargarCategorias() {
         CategoriaRestaurante categoriaRest = new CategoriaRestaurante();
@@ -113,6 +124,19 @@ public class controladorRestauranteReg {
             }
         }
     }
+    
+    public int contarRestaurantesEnTotal() {
+        cargarCategorias();
+        int totalRestaurantes = 0;
+        CategoriaRestaurante categoriaRest = new CategoriaRestaurante();
+        ArrayList<CategoriaRestaurante> categorias = categoriaRest.recuperarCategorias();
+        for (CategoriaRestaurante cat : categorias) {
+            totalRestaurantes += cat.getRestaurantes().size();
+        }
+        return totalRestaurantes;
+    }
+
+
 
     public void ingresarDatos() {
         TableRestaurante.setItems(lista);
@@ -225,8 +249,10 @@ public class controladorRestauranteReg {
             e.printStackTrace();
         }
     }
+    
     @FXML
     void initialize() {
+    	numRestaurantesRegistrados.setText(Integer.toString(contarRestaurantesEnTotal()));
         ingresarDatos();
         cargarCategorias();
     }

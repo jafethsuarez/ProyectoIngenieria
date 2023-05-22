@@ -1,7 +1,7 @@
 [
   {
     "nombre": "Marcos",
-    "telefono": "69874512",
+    "telefono": "698745132",
     "id": 1,
     "categorias": [
       {
@@ -156,7 +156,7 @@
   },
   {
     "nombre": "Kiara",
-    "telefono": "65897412",
+    "telefono": "658974122",
     "reservas": [],
     "id": 3,
     "categorias": [
@@ -312,7 +312,7 @@
   },
   {
     "nombre": "raul",
-    "telefono": "6987654123",
+    "telefono": "698765412",
     "reservas": [],
     "id": 4,
     "categorias": [
@@ -468,7 +468,7 @@
   },
   {
     "nombre": "Jorge",
-    "telefono": "654789123",
+    "telefono": "654789132",
     "reservas": [],
     "id": 5,
     "categorias": [
@@ -624,7 +624,7 @@
   },
   {
     "nombre": "Eddyalberto",
-    "telefono": "65478315",
+    "telefono": "654728315",
     "reservas": [],
     "id": 6,
     "categorias": [
@@ -777,5 +777,292 @@
     "usuario": "Eddy",
     "contrasena": "654789",
     "ubicacion": "Villa-viciosa"
+  },
+  {
+    "nombre": "Paco",
+    "telefono": "635457889",
+    "reservas": [],
+    "id": 7,
+    "categorias": [
+      {
+        "nombreCategoria": "Comida rápida",
+        "restaurantes": [
+          {
+            "nombreRestaurante": "MrDonalds",
+            "menu": {
+              "platos": [
+                {
+                  "id": 1,
+                  "nombre": "Big Mac",
+                  "descripcion": "Hamburguesa con salsa especial Big Mac",
+                  "precio": 16.0
+                },
+                {
+                  "id": 2,
+                  "nombre": "Doble cheese",
+                  "descripcion": "Doble carne con extra queso",
+                  "precio": 12.0
+                },
+                {
+                  "id": 3,
+                  "nombre": "Combo de entrantes gigante",
+                  "descripcion": "Combo completo con patatas",
+                  "precio": 13.0
+                },
+                {
+                  "id": 4,
+                  "nombre": "Chicken Burger",
+                  "descripcion": "Hamburguesa con pollo frito jugoso",
+                  "precio": 12.0
+                },
+                {
+                  "id": 5,
+                  "nombre": "Double Combo",
+                  "descripcion": "Combo doble",
+                  "precio": 12.0
+                }
+              ]
+            },
+            "mesa": 25,
+            "aforo": 100,
+            "usuario": "MC23",
+            "contrasena": "rest123",
+            "ubicacion": "Barcelona"
+          },
+          {
+            "nombreRestaurante": "Kurger Bing",
+            "menu": {
+              "platos": [
+                {
+                  "id": 1,
+                  "nombre": "Cheeseburger",
+                  "descripcion": "Una carne con queso",
+                  "precio": 12.0
+                },
+                {
+                  "id": 2,
+                  "nombre": "Doble cheeseburger",
+                  "descripcion": "Carne Doble",
+                  "precio": 25.0
+                },
+                {
+                  "id": 3,
+                  "nombre": "Patatas con queso",
+                  "descripcion": "Medio kilo de patatas bañadas en queso",
+                  "precio": 6.0
+                }
+              ]
+            },
+            "reservas": [],
+            "mesa": 10,
+            "aforo": 20,
+            "usuario": "BURGER23",
+            "contrasena": "123456",
+            "ubicacion": "Valencia"
+          },
+          {
+            "nombreRestaurante": "Tierra Burrito",
+            "menu": {
+              "platos": [
+                {
+                  "id": 1,
+                  "nombre": "Burrito Carne",
+                  "descripcion": "Burrito con ternera",
+                  "precio": 10.0
+                },
+                {
+                  "id": 2,
+                  "nombre": "Burrito con pollo",
+                  "descripcion": "Burrito con pollo extremeño",
+                  "precio": 12.0
+                }
+              ]
+            },
+            "reservas": [],
+            "mesa": 15,
+            "aforo": 40,
+            "usuario": "tierra",
+            "contrasena": "456",
+            "ubicacion": "Madrid"
+          }
+        ]
+      },
+      {
+        "nombreCategoria": "Bistró",
+        "restaurantes": [
+          {
+            "nombreRestaurante": "Bistro 45",
+            "menu": {
+              "platos": [
+                {
+                  "id": 3,
+                  "nombre": "Torreznos",
+                  "descripcion": "Torreznos con salsa kimchi-mayo",
+                  "precio": 12.0
+                },
+                {
+                  "id": 4,
+                  "nombre": "Potro al horno",
+                  "descripcion": "Carne de potro asada a fuego lento",
+                  "precio": 18.0
+                }
+              ]
+            },
+            "mesa": 10,
+            "aforo": 35,
+            "usuario": "Bistro45",
+            "contrasena": "bistro123",
+            "ubicacion": "Valencia"
+          },
+          {
+            "nombreRestaurante": "NewAge",
+            "menu": {
+              "platos": [
+                {
+                  "id": 1,
+                  "nombre": "Combo entrantes",
+                  "descripcion": "Torreznos, callos y oreja a la plancha",
+                  "precio": 15.0
+                }
+              ]
+            },
+            "reservas": [],
+            "mesa": 10,
+            "aforo": 20,
+            "usuario": "newage",
+            "contrasena": "456789",
+            "ubicacion": "Madrid"
+          }
+        ]
+      },
+      {
+        "nombreCategoria": "Sushi",
+        "restaurantes": [
+          {
+            "nombreRestaurante": "Sushi Go",
+            "menu": {
+              "platos": [
+                {
+                  "id": 5,
+                  "nombre": "Nigiri de salmón",
+                  "descripcion": "4 nigiris de salmón",
+                  "precio": 8.0
+                },
+                {
+                  "id": 6,
+                  "nombre": "Maki de atún",
+                  "descripcion": "8 makis de atún toro",
+                  "precio": 12.0
+                }
+              ]
+            },
+            "mesa": 10,
+            "aforo": 40,
+            "usuario": "SushiGo",
+            "contrasena": "sushigo456",
+            "ubicacion": "Sevilla"
+          },
+          {
+            "nombreRestaurante": "Makis",
+            "menu": {
+              "platos": [
+                {
+                  "id": 1,
+                  "nombre": "Maki California",
+                  "descripcion": "12 piezas de makis california con palta, salmon y queso",
+                  "precio": 12.0
+                }
+              ]
+            },
+            "reservas": [],
+            "mesa": 5,
+            "aforo": 25,
+            "usuario": "mak23",
+            "contrasena": "000",
+            "ubicacion": "Madrid"
+          }
+        ]
+      },
+      {
+        "nombreCategoria": "Pizzería",
+        "restaurantes": [
+          {
+            "nombreRestaurante": "Pizza Mia",
+            "menu": {
+              "platos": [
+                {
+                  "id": 7,
+                  "nombre": "Margherita",
+                  "descripcion": "Pizza margarita de la casa",
+                  "precio": 9.0
+                },
+                {
+                  "id": 8,
+                  "nombre": "Carbonara",
+                  "descripcion": "Pizza carbonara de la casa",
+                  "precio": 14.0
+                }
+              ]
+            },
+            "mesa": 30,
+            "aforo": 100,
+            "usuario": "PizzaMia",
+            "contrasena": "pizzamia789",
+            "ubicacion": "Madrid"
+          },
+          {
+            "nombreRestaurante": "Tagliatella",
+            "menu": {
+              "platos": [
+                {
+                  "id": 1,
+                  "nombre": "Pasta Carbonara",
+                  "descripcion": "Maccheroni con salsa carbonara",
+                  "precio": 12.0
+                }
+              ]
+            },
+            "reservas": [],
+            "mesa": 6,
+            "aforo": 23,
+            "usuario": "Tag23",
+            "contrasena": "123456",
+            "ubicacion": "Valencia"
+          }
+        ]
+      },
+      {
+        "nombreCategoria": "Cocina casera",
+        "restaurantes": [
+          {
+            "nombreRestaurante": "Aji",
+            "menu": {
+              "platos": [
+                {
+                  "id": 7,
+                  "nombre": "Cocido madrileño",
+                  "descripcion": "Gran ración de cocido madrileño",
+                  "precio": 9.0
+                },
+                {
+                  "id": 8,
+                  "nombre": "Arroz a la cubana",
+                  "descripcion": "Arroz con huevo frito y tomate",
+                  "precio": 14.0
+                }
+              ]
+            },
+            "mesa": 11,
+            "aforo": 40,
+            "usuario": "PizzaMia",
+            "contrasena": "pizzamia789",
+            "ubicacion": "Madrid"
+          }
+        ]
+      }
+    ],
+    "usuario": "paco12",
+    "contrasena": "paco12",
+    "ubicacion": "Madrid"
   }
 ]
