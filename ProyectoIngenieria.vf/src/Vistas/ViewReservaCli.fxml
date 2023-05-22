@@ -6,8 +6,6 @@
 <?import com.jfoenix.controls.JFXListView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -15,109 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<HBox prefHeight="600.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="600.0" prefWidth="310.0" HBox.hgrow="ALWAYS">
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="526.0" styleClass="body" stylesheets="@../CssStyle/Login.css" HBox.hgrow="ALWAYS">
          <children>
-            <GridPane prefHeight="598.0" prefWidth="310.0" styleClass="root" stylesheets="@../CssStyle/Login.css" VBox.vgrow="ALWAYS">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <ImageView fitHeight="77.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                     <image>
-                        <Image url="@../../image/Logo.PNG" />
-                     </image>
-                  </ImageView>
-                  <Label text="FOODCHAIN">
-                     <GridPane.margin>
-                        <Insets left="120.0" />
-                     </GridPane.margin>
-                     <font>
-                        <Font name="Freestyle Script" size="29.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                     <image>
-                        <Image url="@../../image/usuario.png" />
-                     </image>
-                  </ImageView>
-                  <Label onMouseClicked="#Restaurantes" text="Restaurantes" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets left="100.0" />
-                     </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-                     <image>
-                        <Image url="@../../image/reservado.png" />
-                     </image>
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </ImageView>
-                  <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                     <image>
-                        <Image url="@../../image/restaurante.png" />
-                     </image>
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </ImageView>
-                  <Label onMouseClicked="#Reservas" text="Reservas" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="100.0" />
-                     </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="lblCliente" text="Cliente" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="100.0" />
-                     </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-                     <image>
-                        <Image url="@../../image/salida.png" />
-                     </image>
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </ImageView>
-                  <Label onMouseClicked="#Salir" text="Salir " GridPane.rowIndex="4">
-                     <GridPane.margin>
-                        <Insets left="100.0" />
-                     </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </GridPane>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" styleClass="body" stylesheets="@../CssStyle/Login.css" HBox.hgrow="ALWAYS">
-         <children>
-            <GridPane fx:id="gridRestaurante" prefHeight="481.0" prefWidth="490.0" VBox.vgrow="ALWAYS">
+            <GridPane fx:id="gridRestaurante" prefHeight="481.0" prefWidth="440.0" VBox.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -162,7 +62,10 @@
                            </GridPane.margin></Label>
                         <JFXDatePicker fx:id="DatePicker" onAction="#Calendario" GridPane.columnIndex="1" />
                         <JFXComboBox fx:id="CbxHora" onAction="#MostrarHora" prefHeight="31.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <JFXListView fx:id="ListMenu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXListView fx:id="ListMenu" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </GridPane.margin></JFXListView>
                         <Label text="Nº de personas:" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="10.0" />

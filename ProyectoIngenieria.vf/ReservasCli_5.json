@@ -3,16 +3,32 @@
     {
       "id": 1,
       "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 23
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 23.0
       },
-      "hora": "14:00",
+      "hora": "15:00",
       "cantidad": 6,
       "menuSeleccionado": [
         "Big Mac - 10.5€"
       ],
       "nombreRest": "MrDonalds"
+    }
+  ],
+  "Pizza Mia": [
+    {
+      "id": 1,
+      "fecha": {
+        "year": 2023,
+        "month": 6,
+        "day": 2
+      },
+      "hora": "13:00",
+      "cantidad": 3,
+      "menuSeleccionado": [
+        "Margherita - 9.0€"
+      ],
+      "nombreRest": "Pizza Mia"
     }
   ]
 }

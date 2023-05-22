@@ -13,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 
 public class ControllerCambioContrasena {
 
@@ -59,7 +60,15 @@ public class ControllerCambioContrasena {
 
         if (encontrar && informacionIncorrecta) {
             if (!esCliente) {
-                if (txtContrasena.getText().equals(txtxconfirmarCont.getText())) {
+            	if (txtContrasena.getText().isEmpty() || txtxconfirmarCont.getText().isEmpty()) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setTitle("Error al cambiar contraseña");
+                    alert.setContentText("Los campos son nulos");
+                    alert.showAndWait();
+                    return;
+            	}   	
+            	else if (txtContrasena.getText().equals(txtxconfirmarCont.getText()) && !txtContrasena.getText().isEmpty() && !txtxconfirmarCont.getText().isEmpty()) {
                     clientes.get(indice).setContrasena(txtContrasena.getText());
                     Cliente.guardarCliente(clientes);
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -67,6 +76,8 @@ public class ControllerCambioContrasena {
                     alert.setTitle("Cambio de contraseña");
                     alert.setContentText("La contraseña ha sido cambiada correctamente");
                     alert.showAndWait();
+            	    Stage currentStage = (Stage) txtusuario.getScene().getWindow();
+            	    currentStage.close();
                 } else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setHeaderText(null);
