@@ -51,7 +51,17 @@ public class ControllerRegistrar {
     private JFXButton btnReg;
     
     ObservableList<String> ubicacionList = FXCollections.observableArrayList("Madrid","Pozuelo","Villa-viciosa");
-
+    
+    public static boolean contieneNumero(String texto) {
+        for (int i = 0; i < texto.length(); i++) {
+            if (Character.isDigit(texto.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    
     @FXML
     void Registrar(ActionEvent event) {
     	 // Validar campos de entrada
@@ -65,11 +75,20 @@ public class ControllerRegistrar {
             return;
         }
         
-        if (txttelefono.getText().length() > 9) {
+        if (txttelefono.getText().length() != 9) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("Número de teléfono invalido");
+            alert.showAndWait();
+            return;
+        }
+        
+        if (contieneNumero(txtnombre.getText())) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("El nombre contiene carácteres inválidos");
             alert.showAndWait();
             return;
         }
