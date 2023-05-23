@@ -18,8 +18,9 @@ import java.io.IOException;
 import java.net.URL;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -83,6 +84,8 @@ public class ControllerPrincipalRest {
     private Restaurante restaurante;
     @FXML
     private JFXButton btnExportar;
+    
+    LocalDateTime now = LocalDateTime.now();  
 
     public void setRestaurante(Restaurante restaurante) {
         this.restaurante = restaurante;
@@ -141,6 +144,7 @@ public class ControllerPrincipalRest {
                 fileWriter.append(",");
                 fileWriter.append(String.join(",", reserva.getMenuSeleccionado()));
                 fileWriter.append("\n");
+                
             }
 
             // Muestra un mensaje de éxito después de la exportación
@@ -239,8 +243,19 @@ public class ControllerPrincipalRest {
                 	List<Reserva> reservasFiltradas = reservasRestaurante.stream()
                 		    .filter(reserva -> reserva.getNombreRest().equals(restaurante.getNombreRestaurante()))
                 		    .collect(Collectors.toList());
-
+                	
                     todasLasReservas.addAll(reservasFiltradas);
+                    Iterator<Reserva> iterator = todasLasReservas.iterator();
+                    LocalDateTime now = LocalDateTime.now(); 
+
+                    while (iterator.hasNext()) {
+                        Reserva reserva = iterator.next();
+                        LocalDateTime fechaEscogida = LocalDateTime.of(reserva.getFecha().getYear(), reserva.getFecha().getMonth(), 
+                        		reserva.getFecha().getDay(), 23, 59);
+                        if (fechaEscogida.isBefore(now)) {
+                            iterator.remove();
+                        }
+                    }
                 }
 
                 reader.close();
