@@ -153,7 +153,7 @@
                      <GridPane.margin>
                         <Insets left="100.0" />
                      </GridPane.margin></JFXButton>
-                  <JFXComboBox fx:id="cbxCatRest" onAction="#CatRest" prefHeight="31.0" prefWidth="182.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="cbxCatRest" onAction="#CatRest" prefHeight="31.0" prefWidth="182.0" promptText="Seleccionar categoría" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <JFXButton onAction="#RegistrarRest" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Registrar" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="150.0" />

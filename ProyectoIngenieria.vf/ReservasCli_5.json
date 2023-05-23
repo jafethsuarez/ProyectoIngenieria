@@ -1,20 +1,6 @@
 {
   "MrDonalds": [
     {
-      "id": 1,
-      "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 22
-      },
-      "hora": "14:00",
-      "cantidad": 6,
-      "menuSeleccionado": [
-        "Big Mac - 10.5€"
-      ],
-      "nombreRest": "MrDonalds"
-    },
-    {
       "id": 2,
       "fecha": {
         "year": 2023,
@@ -27,25 +13,24 @@
         "Big Mac - 16.0€"
       ],
       "nombreRest": "MrDonalds"
-    }
-  ],
-  "Pizza Mia": [],
-  "Bistro 45": [
+    },
     {
-      "id": 1,
+      "id": 3,
       "fecha": {
         "year": 2023,
         "month": 5,
-        "day": 22
+        "day": 24
       },
-      "hora": "14:00",
-      "cantidad": 4,
+      "hora": "12:00",
+      "cantidad": 2,
       "menuSeleccionado": [
-        "Torreznos - 12.0€"
+        "Doble cheese - 12.0€"
       ],
-      "nombreRest": "Bistro 45"
+      "nombreRest": "MrDonalds"
     }
   ],
+  "Pizza Mia": [],
+  "Bistro 45": [],
   "Sushi Go": [],
   "NewAge": [
     {
@@ -53,7 +38,7 @@
       "fecha": {
         "year": 2023,
         "month": 5,
-        "day": 23
+        "day": 24
       },
       "hora": "13:00",
       "cantidad": 3,

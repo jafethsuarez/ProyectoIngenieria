@@ -238,7 +238,7 @@ public class controladorRestauranteReg {
     void RegistrarRest(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Vistas/RegistrarRestaurante.fxml")); // Reemplaza "/path/to/" con la ruta real del archivo FXML.
-            Parent root = fxmlLoader.load();
+            Parent root = fxmlLoader.load(); 
             ControllerRegistrarRestAdmin controller = fxmlLoader.getController();
             // Realiza cualquier configuración adicional en el controlador, si es necesario
 
