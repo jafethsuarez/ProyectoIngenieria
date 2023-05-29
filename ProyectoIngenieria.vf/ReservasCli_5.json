@@ -3,9 +3,9 @@
     {
       "id": 2,
       "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 23
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 23.0
       },
       "hora": "13:00",
       "cantidad": 4,
@@ -17,14 +17,42 @@
     {
       "id": 3,
       "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 24
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 24.0
       },
       "hora": "12:00",
       "cantidad": 2,
       "menuSeleccionado": [
         "Doble cheese - 12.0€"
+      ],
+      "nombreRest": "MrDonalds"
+    },
+    {
+      "id": 3,
+      "fecha": {
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 30.0
+      },
+      "hora": "14:00",
+      "cantidad": 4,
+      "menuSeleccionado": [
+        "Big Mac - 16.0€"
+      ],
+      "nombreRest": "MrDonalds"
+    },
+    {
+      "id": 4,
+      "fecha": {
+        "year": 2023,
+        "month": 5,
+        "day": 31
+      },
+      "hora": "10:00",
+      "cantidad": 3,
+      "menuSeleccionado": [
+        "Big Mac - 16.0€"
       ],
       "nombreRest": "MrDonalds"
     }
@@ -36,9 +64,9 @@
     {
       "id": 1,
       "fecha": {
-        "year": 2023,
-        "month": 5,
-        "day": 24
+        "year": 2023.0,
+        "month": 5.0,
+        "day": 24.0
       },
       "hora": "13:00",
       "cantidad": 3,

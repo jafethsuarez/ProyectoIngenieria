@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -135,71 +134,11 @@
                         <Font name="Bookman Old Style" size="29.0" />
                      </font>
                   </Label>
-                  <Label text="McDonald's" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="150.0" />
-                     </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <JFXButton styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Reservar" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets right="50.0" />
-                     </GridPane.margin>
-                  </JFXButton>
-                  <ImageView fitHeight="75.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="50.0" />
-                     </GridPane.margin>
-                     <image>
-                        <Image url="@../../image/mcdonalds.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="logorest" fitHeight="81.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                     <image>
-                        <Image url="@../../image/goiko.png" />
-                     </image>
-                     <GridPane.margin>
-                        <Insets left="50.0" />
-                     </GridPane.margin>
-                  </ImageView>
-                  <Label fx:id="nombreRest" text="TommyRomans" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <GridPane.margin>
-                        <Insets left="150.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <JFXButton fx:id="btnReverva" onAction="#Reservar" styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Reservar" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets right="50.0" />
-                     </GridPane.margin>
-                  </JFXButton>
                   <JFXComboBox fx:id="CbxRest" onAction="#MostrarCategorias" prefHeight="31.0" prefWidth="316.0" promptText="Elige la categoría del restaurante " GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
                   </JFXComboBox>
-                  <ImageView fitHeight="75.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-                     <image>
-                        <Image url="@../../image/Vips.png" />
-                     </image>
-                     <GridPane.margin>
-                        <Insets left="50.0" />
-                     </GridPane.margin>
-                  </ImageView>
-                  <Label text="Vips " GridPane.rowIndex="4">
-                     <GridPane.margin>
-                        <Insets left="150.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <JFXButton styleClass="btn" stylesheets="@../CssStyle/Login.css" text="Reservar" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
-                     <GridPane.margin>
-                        <Insets right="50.0" />
-                     </GridPane.margin>
-                  </JFXButton>
                </children>
             </GridPane>
          </children>
